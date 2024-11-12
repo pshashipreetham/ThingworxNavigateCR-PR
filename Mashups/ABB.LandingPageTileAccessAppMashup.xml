@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="false"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ABB.LandingPageTileAccessAppMashup"
+         projectName="ABBProject"
+         rows="0.0"
+         tags="TWXNavigate:Navigate;PTC:Navigate;Applications:ptc-access-app-example;PTC:ROLE_BASED_APPS">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="NavigateOrganization"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height></height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width></width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.dataShape="PTC.NavigateApps.AppDataShape"
+                 aspect.isDataTableEntry="true"
+                 aspect.isMandatory="false"
+                 baseType="INFOTABLE"
+                 description=""
+                 name="useCaseProperties"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "DynamicThingTemplates_PTC.Converge.App.BaseAccessAppConfigTemplate" : {
+                  "DataName" : "DynamicThingTemplates_PTC.Converge.App.BaseAccessAppConfigTemplate",
+                  "EntityName" : "PTC.Converge.App.BaseAccessAppConfigTemplate",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "e9ae73eb-0451-4d8a-a1fd-3584b3b6aa81",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "893944b2-5d6b-4a82-9040-ee5413165e1e",
+                    "Name" : "CheckAppAccessValidation",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "CheckAppAccessValidation"
+                  } ]
+                },
+                "Groups_Administrators" : {
+                  "DataName" : "Groups_Administrators",
+                  "EntityName" : "Administrators",
+                  "EntityType" : "Groups",
+                  "Id" : "0aa2edd5-b87f-476c-8854-4985d69f3af0",
+                  "Services" : [ ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_MasterAccessAppThing" : {
+                  "DataName" : "Things_MasterAccessAppThing",
+                  "EntityName" : "MasterAccessAppThing",
+                  "EntityType" : "Things",
+                  "Id" : "6587fafd-6c92-4197-b532-1f42e02822aa",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "b891ca9c-6d65-48be-9526-5b0d02c2648c",
+                    "Name" : "IsCurrentUserAdministrator",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "IsCurrentUserAdministrator"
+                  } ]
+                },
+                "Things_SmartConnected" : {
+                  "DataName" : "Things_SmartConnected",
+                  "EntityName" : "SmartConnected",
+                  "EntityType" : "Things",
+                  "Id" : "69827b3d-eb46-4a3a-a1c8-e87462c3d916",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "b3ccc83d-992e-435f-b8d7-aaa8e788ba88",
+                    "Name" : "CollectUiLoggerData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "CollectUiLoggerData"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "970f4224-072d-498d-858c-20ce4c4f6404",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Visible",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression2-38",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Link-10",
+                "TargetSection" : ""
+              }, {
+                "Id" : "34e90b06-dec7-4a7b-bfc3-35a4237c058e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "url",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Link-7",
+                "TargetSection" : ""
+              }, {
+                "Id" : "46dad6b0-f471-4d6b-a734-9c09a0d46744",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "tailoringurl",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Link-10",
+                "TargetSection" : ""
+              }, {
+                "Id" : "7ed75a42-0f6e-4cc9-8e5a-a1c1233ccf9a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "IMAGELINK",
+                  "SubProperty" : "avatar",
+                  "TargetProperty" : "SourceURL",
+                  "TargetPropertyBaseType" : "IMAGELINK"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Image-2",
+                "TargetSection" : ""
+              }, {
+                "Id" : "52139744-dfd3-495d-ad11-092d258ec463",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "displayname",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Label-3",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9635b8ed-a88e-4834-b866-ae67cdc72000",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "tailoringmashup",
+                  "TargetProperty" : "tailoringUrl",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "expression2-38",
+                "TargetSection" : ""
+              }, {
+                "Id" : "8ccc1e8a-08e8-46d7-b3e2-6bf1ac0a45c1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "tailoringmashup",
+                  "TargetProperty" : "tailoringMashup",
+                  "TargetPropertyBaseType" : ""
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "expression2-39",
+                "TargetSection" : ""
+              }, {
+                "Id" : "1712bd4c-ff06-464b-a8cc-de45c0e7c80f",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "MashupDataLog",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "loggerData",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "UiLogger-26",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "CollectUiLoggerData",
+                "TargetSection" : "Things_SmartConnected"
+              }, {
+                "Id" : "de71dbc0-3d62-4cb3-a56c-07fa88cfae70",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "displayname",
+                  "TargetProperty" : "appName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "CollectUiLoggerData",
+                "TargetSection" : "Things_SmartConnected"
+              }, {
+                "Id" : "22625ab8-8dbc-49bc-8016-ee625534e7e6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SubProperty" : "thingname",
+                  "TargetProperty" : "thingName",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "expression2-38",
+                "TargetSection" : ""
+              }, {
+                "Id" : "c75682f8-14fb-4bf2-83e5-80807ac95a0c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "isAdminUser",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "IsCurrentUserAdministrator",
+                "SourceSection" : "Things_MasterAccessAppThing",
+                "TargetArea" : "UI",
+                "TargetId" : "expression2-38",
+                "TargetSection" : ""
+              }, {
+                "Id" : "4e3c74a5-b6da-4d5a-8473-df8b9e54dc56",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "property",
+                  "SubProperty" : "thingname",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_PTC.Converge.App.BaseAccessAppConfigTemplate"
+              }, {
+                "Id" : "190f3aec-b7ce-4686-a959-731c0e789892",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "appValidationPassed",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "CheckAppAccessValidation",
+                "SourceSection" : "DynamicThingTemplates_PTC.Converge.App.BaseAccessAppConfigTemplate",
+                "TargetArea" : "UI",
+                "TargetId" : "validator2-40",
+                "TargetSection" : ""
+              }, {
+                "Id" : "03c5a222-ca6d-424d-be8d-0cb7e70be0ce",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "property",
+                  "SubProperty" : "isAppValidationRequired",
+                  "TargetProperty" : "appValidationRequired",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "validator2-40",
+                "TargetSection" : ""
+              }, {
+                "Id" : "b35355ce-ddcf-475d-8a64-ac2c26b593c1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "useCaseProperties",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "property",
+                  "SubProperty" : "isAppValidationRequired",
+                  "TargetProperty" : "appValidationRequired",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "AllData",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "validator2-41",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "expression2-39",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "1a9f19c0-b556-4f13-b5c2-27aacf83fd0d"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "UiLogger-26",
+                "EventHandlerService" : "Purge",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "CollectUiLoggerData",
+                "EventTriggerSection" : "Things_SmartConnected",
+                "Id" : "a4e84cbb-0255-4e54-9614-fbff46837f1a"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "UiLogger-26",
+                "EventHandlerService" : "Trigger",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "b27b9d1b-6f11-4695-bd8f-cce299fd25ec"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_SmartConnected",
+                "EventHandlerService" : "CollectUiLoggerData",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "UiLogger-26",
+                "EventTriggerSection" : "",
+                "Id" : "18d153e7-8f41-434f-9041-fc90e2defee9"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_MasterAccessAppThing",
+                "EventHandlerService" : "IsCurrentUserAdministrator",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "9af725ce-d4cd-4299-a2ec-5df3b271bd2d"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "expression2-38",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "IsCurrentUserAdministrator",
+                "EventTriggerSection" : "Things_MasterAccessAppThing",
+                "Id" : "e1fa0c75-28e0-4ea3-8e35-aa8fd9b4d27e"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigationfunction-36",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator2-40",
+                "EventTriggerSection" : "",
+                "Id" : "d4302315-20c4-42fe-939d-ec578607e89b"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator2-40",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "button-33",
+                "EventTriggerSection" : "",
+                "Id" : "1163a80d-ec7c-406a-8c64-5254a54387a2"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "Link-7",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator2-40",
+                "EventTriggerSection" : "",
+                "Id" : "32fb0fa3-8c60-4fe4-bce9-ee5e6fb9d6e7"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_PTC.Converge.App.BaseAccessAppConfigTemplate",
+                "EventHandlerService" : "CheckAppAccessValidation",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator2-41",
+                "EventTriggerSection" : "",
+                "Id" : "28967872-7e60-4109-b7eb-ea91a1134f38"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator2-41",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "useCasePropertiesChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "c70fbf6e-5884-4ad8-8ea1-02e7fec7ab58"
+              } ],
+              "Reminders" : [ ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisableLegacyCustomClassStyles" : false,
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 208,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "LegacyFocus" : true,
+                  "Margin" : "5",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "LandingpageTileStyleDefinitionNavigate",
+                  "StyleTheme" : "ABB.StyleTheme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 208,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "dataShape" : "PTC.NavigateApps.AppDataShape",
+                      "isDataTableEntry" : true,
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "INFOTABLE",
+                    "Description" : "",
+                    "ParameterName" : "useCaseProperties"
+                  } ],
+                  "id_index" : 41,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ContainerClass" : "app-tile-panel-container",
+                    "DisableLegacyCustomClassStyles" : false,
+                    "DisplayName" : "panel-25",
+                    "Height" : 208,
+                    "HideScrollbars" : true,
+                    "HorizontalAnchor" : "left",
+                    "Id" : "panel-25",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : "PTC.Nav.NoStyle",
+                    "Top" : 0,
+                    "Type" : "panel",
+                    "VerticalAnchor" : "top",
+                    "Visible" : true,
+                    "Width" : 208,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Panel",
+                    "flex-grow" : "",
+                    "flex-shrink" : ""
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "BorderStyle" : "DefaultImageBorderStyle",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "Image-2",
+                      "Height" : 80,
+                      "Id" : "Image-2",
+                      "LastContainer" : false,
+                      "Left" : 65,
+                      "Margin" : "5",
+                      "PreventCaching" : false,
+                      "ResponsiveLayout" : false,
+                      "Scaling" : "width",
+                      "ShowDataLoading" : true,
+                      "SourceURL" : "",
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 30,
+                      "Type" : "image",
+                      "Visible" : true,
+                      "Width" : 80,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "center",
+                      "AllowEllipsis" : false,
+                      "Area" : "UI",
+                      "Description" : "",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "Label-3",
+                      "Height" : 62,
+                      "Id" : "Label-3",
+                      "LastContainer" : false,
+                      "Left" : 8,
+                      "Margin" : "5",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Style" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "#000000",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "2xl"
+                      },
+                      "Text" : "",
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 130,
+                      "Type" : "label",
+                      "Visible" : true,
+                      "Width" : 190,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Label",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DataTransferRate" : 10000,
+                      "DisplayName" : "UiLogger-26",
+                      "Height" : 20,
+                      "Id" : "UiLogger-26",
+                      "LastContainer" : false,
+                      "Left" : 75,
+                      "Margin" : "5",
+                      "NumberOfSeries" : 8,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Style" : "DefaultLabelStyle",
+                      "Top" : 180,
+                      "Type" : "UiLogger",
+                      "Visible" : true,
+                      "Width" : 50,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "UiLogger",
+                      "text" : ""
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "AlternateText" : "",
+                      "Area" : "UI",
+                      "BorderStyle" : "DefaultImageBorderStyle",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "image-32",
+                      "Height" : 45,
+                      "Id" : "image-32",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "5",
+                      "PreventCaching" : false,
+                      "ResponsiveLayout" : false,
+                      "Scaling" : "width",
+                      "ShowDataLoading" : true,
+                      "SourceURL" : "PTC.AccessApp.NewAppIcon",
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 0,
+                      "Type" : "image",
+                      "Visible" : false,
+                      "Width" : 45,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Image",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "left",
+                      "Area" : "UI",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "Link-7",
+                      "Height" : 208,
+                      "Id" : "Link-7",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "LinkDisplay" : "noText",
+                      "LinkHoverStyle" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "#66cc33",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "LinkStyle" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "Margin" : "5",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "SourceURL" : "",
+                      "TabSequence" : 0,
+                      "TargetWindow" : "replace",
+                      "Text" : "Link Text",
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 0,
+                      "Type" : "link",
+                      "VerticalAlignment" : "flex-start",
+                      "Visible" : false,
+                      "Width" : 10,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Link",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Alignment" : "center",
+                      "Area" : "UI",
+                      "Description" : "",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "Tailoring Mashup Link",
+                      "Height" : 40,
+                      "Id" : "Link-10",
+                      "LastContainer" : false,
+                      "Left" : 165,
+                      "LinkDisplay" : "noText",
+                      "LinkHoverStyle" : "PTC.AccessApp.EditIconTransparentStyle",
+                      "LinkStyle" : "PTC.AccessApp.EditIconTransparentStyle",
+                      "Margin" : "5",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "SourceURL" : "",
+                      "TabSequence" : 0,
+                      "TargetWindow" : "replace",
+                      "Text" : "[[PTC.AccessApp.EditButtonLabel]]",
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 0,
+                      "Type" : "link",
+                      "VerticalAlignment" : "flex-start",
+                      "Visible" : false,
+                      "Width" : 40,
+                      "Z-index" : 11,
+                      "__TypeDisplayName" : "Link",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "ActiveStyle" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "Area" : "UI",
+                      "CancelConfirmationButton" : "button2",
+                      "ConfirmationButton1Label" : "Yes",
+                      "ConfirmationButton2Label" : "No",
+                      "ConfirmationPrompt" : "Do Action?",
+                      "ConfirmationRequired" : false,
+                      "ConfirmationTitle" : "Confirm Action",
+                      "ContextId" : "",
+                      "DefaultConfirmationButton" : "button1",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "Disabled" : false,
+                      "DisabledStyle" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "DisplayName" : "button-33",
+                      "FocusStyle" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "Height" : 208,
+                      "HoverStyle" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "IconAlignment" : "left",
+                      "Id" : "button-33",
+                      "Label" : "",
+                      "LastContainer" : false,
+                      "Left" : 0,
+                      "Margin" : "5",
+                      "ResponsiveLayout" : false,
+                      "RoundedCorners" : true,
+                      "ShowDataLoading" : true,
+                      "SingleClickSelectOnTablets" : true,
+                      "Style" : {
+                        "backgroundColor" : "",
+                        "displayString" : "",
+                        "fontEmphasisBold" : false,
+                        "fontEmphasisItalic" : false,
+                        "fontEmphasisUnderline" : false,
+                        "foregroundColor" : "",
+                        "image" : "",
+                        "lineColor" : "",
+                        "lineStyle" : "solid",
+                        "lineThickness" : 1,
+                        "secondaryBackgroundColor" : "",
+                        "textSize" : "normal"
+                      },
+                      "TabSequence" : 0,
+                      "ToolTipField" : "",
+                      "ToolTipStyle" : "DefaultTooltipStyle",
+                      "Top" : 0,
+                      "Type" : "button",
+                      "Visible" : true,
+                      "Width" : 208,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Button",
+                      "__supportsTooltip" : true
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ClickOutsideToClose" : false,
+                    "CloseButton" : false,
+                    "DisplayName" : "raisePopupErrorMashup",
+                    "Id" : "navigationfunction-36",
+                    "IncludeLegacyHeightAdjustment" : true,
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "LegacyHeightAdjustmentEnabled" : true,
+                    "Margin" : "5",
+                    "MashupParameters" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "The text displayed in the body of the Mashup",
+                      "ParameterName" : "bodyText",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "The text displayed in the body of the Mashup",
+                        "name" : "bodyText",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "The text displayed in the header of the Mashup",
+                      "ParameterName" : "headerText",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "The text displayed in the header of the Mashup",
+                        "name" : "headerText",
+                        "ordinal" : 0
+                      }
+                    } ],
+                    "MissingMashupMessage" : "",
+                    "PopupHeight" : "260",
+                    "PopupScrollbar" : "auto",
+                    "PopupTitle" : "",
+                    "PopupWidth" : "600",
+                    "RedirectTo" : "mashup",
+                    "ReloadOnReplace" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TargetMashup" : "PTC.Nav.RaiseErrorMashup",
+                    "TargetWindow" : "new",
+                    "TargetWindowType" : "modal-popup",
+                    "Text" : "tw.navigationfunction-ide.properties.text.default-value",
+                    "Top" : null,
+                    "Type" : "navigationfunction",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "navigationfunction",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "[[PTC.Nav.TheTaskIsNotAvailable]]",
+                      "Description" : "The text displayed in the body of the Mashup",
+                      "ParameterName" : "bodyText",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "DefaultValue" : "[[PTC.Nav.SomethingWentWrong]]",
+                      "Description" : "The text displayed in the header of the Mashup",
+                      "ParameterName" : "headerText",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "VALUE",
+                    "DefaultNumberEvaluation" : true,
+                    "Description" : "",
+                    "DisplayName" : "Thingworx Admin Group Expression",
+                    "Expression" : "Output = isAdminUser === true && tailoringUrl != \"\" ? true : false;",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-38",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "OutputBaseType" : "BOOLEAN",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_baseVersion" : "9.5.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "tailoringUrl",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "thingName",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : false,
+                      "Description" : "true if current user is an administrator",
+                      "ParameterName" : "isAdminUser",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "VALUE",
+                    "DefaultNumberEvaluation" : true,
+                    "Description" : "",
+                    "DisplayName" : "deciderStyle",
+                    "Expression" : "Output = tailoringMashup != \"\" ? \"LandingpageTileStyleDefinitionNavigate\" : \"LandingPageTileCustomAccessAppStyleDefinition\";",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-39",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "Output" : "",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_baseVersion" : "9.5.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "tailoringMashup",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "Description" : "Return true if on click on the tile requires to raise a validation error pop up. (App validation didn't pass).",
+                    "DisplayName" : "checkIfToRaiseErrorPopup",
+                    "Expression" : "let result = false; \nif(appValidationPassed == false) {\n\tresult = true;\n}\nOutput = result;",
+                    "Height" : 28,
+                    "Id" : "validator2-40",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "validator2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_baseVersion" : "9.5.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : "true",
+                      "Description" : "",
+                      "ParameterName" : "appValidationPassed",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : "false",
+                      "Description" : "",
+                      "ParameterName" : "appValidationRequired",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "Description" : "Return true if performing a validation for app access is required for this app.",
+                    "DisplayName" : "checkIfToCallToValidation",
+                    "Expression" : "Output = appValidationRequired;",
+                    "Height" : 28,
+                    "Id" : "validator2-41",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "5",
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "validator2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_baseVersion" : "9.5.0",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : "false",
+                      "Description" : "",
+                      "ParameterName" : "appValidationRequired",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

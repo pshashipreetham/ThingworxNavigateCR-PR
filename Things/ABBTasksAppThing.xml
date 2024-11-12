@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Things>
+        <Thing
+         description="Customized ABB Thing for Task"
+         documentationContent=""
+         effectiveThingPackage="PTC.Converge.App.CustomizedAccessAppConfigPackage"
+         enabled="true"
+         homeMashup="ABB.MyTasksAppMashup"
+         identifier=""
+         inheritedValueStream=""
+         name="ABBTasksAppThing"
+         projectName="ABBProject"
+         published="false"
+         tags="TWXNavigate:Navigate;PTC:Navigate;PTC:ROLE_BASED_APPS;PTC:PTC.AccessApp.ContributeApps"
+         thingTemplate="PTC.Converge.App.CustomizedAccessAppConfigTemplate"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Manufacturing"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Manufacturing"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="NavigateOrganization"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Access App Configuration"
+                 isMultiRow="false"
+                 name="Access App Configuration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="PTC.AccessApp.RoleConfigDataShape"
+                             baseType="INFOTABLE"
+                             description="Access App Role Based Configuration"
+                             name="RoleBasedAccessAppConfig"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <RoleBasedAccessAppConfig>
+                                <infoTable>
+                                    <DataShape>
+                                        <FieldDefinitions></FieldDefinitions>
+                                    </DataShape>
+                                    <Rows></Rows>
+                                </infoTable>
+                            </RoleBasedAccessAppConfig>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="completeWorkOrderById">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="special_instructions"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="UserEventList"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkitemComment"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAdditionalAttributes">
+                        <ResultType
+                         aspect.dataShape="AddtionalAttributes"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="changeRequestId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getBreadCrumbDataAffectedObj">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.Breadcrumb.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getBreadCrumData">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.Breadcrumb.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getChangeRequestDetailsByID">
+                        <ResultType
+                         aspect.dataShape="ChangeRequestDetails"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="changeRequestId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getChangeRequestID">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCSRFToken">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProblemReportAttachmentsById">
+                        <ResultType
+                         aspect.dataShape="ProblemReportAttachmentsDetails"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="problemReportId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getProblemReportDetailsByID">
+                        <ResultType
+                         aspect.dataShape="ProblemReportDetails"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="changeRequestId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getReportProblemAffectedDetailsById">
+                        <ResultType
+                         aspect.dataShape="ProblemReportAffectedObjectDetails"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="problemReportId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getWorkItemByID">
+                        <ResultType
+                         aspect.dataShape="WorkItemDetails"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getWorkItemSubjectByID">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="completeWorkOrderById">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var CSRFToken = me.getCSRFToken();
+                                        
+                                        var jsonData = {};
+                                        
+                                        var EventList = [];
+                                        if (UserEventList !== "" && UserEventList !== undefined) {
+                                        	EventList[0] = UserEventList;
+                                        	jsonData = {
+                                        		"Variables": [{
+                                        			"Name": "special_instructions",
+                                        			"Value": special_instructions
+                                        		}],
+                                        		"UserEventList": EventList,
+                                        		"WorkitemComment": WorkitemComment,
+                                        		"VoteAction": "",
+                                        		"AutomateFastTrack": false
+                                        	};
+                                        } else {
+                                        	EventList = [];
+                                        	jsonData = {
+                                        		"Variables": [{
+                                        			"Name": "",
+                                        		}],
+                                        		"UserEventList": EventList,
+                                        		"WorkitemComment": WorkitemComment,
+                                        		"VoteAction": "",
+                                        		"AutomateFastTrack": false
+                                        	};
+                                        }
+                                        
+                                        logger.warn("completeWorkOrderById >> UserEventList " + UserEventList + " || WorkitemComment" + WorkitemComment);
+                                        var workOrderStatus = Things["ABB-windchill-OData-connector"].setCompleteWorkOrderById({
+                                        	WorkItemCompleteInfo: jsonData /* JSON {"dataShape":""} */ ,
+                                        	WorkItemId: WorkItemId /* STRING [Required] {"dataShape":""} */
+                                        });
+                                        
+                                        result = workOrderStatus.Status.Value;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAdditionalAttributes">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var problemReport = Things["ABB-windchill-OData-connector"].getReportProblemByID({
+                                        	ID: changeRequestId
+                                        });
+                                        
+                                        var problemReportContext = Things["ABB-windchill-OData-connector"].getProblemReportContext({
+                                        	$expand: undefined /* STRING {"dataShape":""} */,
+                                        	ProblemReportId: changeRequestId /* STRING [Required] {"dataShape":""} */,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AddtionalAttributes)
+                                        let additionalAttributes = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "AddtionalAttributes"
+                                        });
+                                        
+                                        additionalAttributes.AddRow({
+                                            ContextName: problemReportContext.Name, // STRING
+                                            TeamName: problemReport.TeamTemplateName, // STRING
+                                            CreatedBy: problemReport.CreatedBy, // STRING
+                                            CreatedOn: dateFormat(parseDateISO(problemReport.CreatedOn), "dd-MM-yyyy hh:mm:ss.SSS") // STRING
+                                        });
+                                        
+                                        result = additionalAttributes;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getBreadCrumbDataAffectedObj">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.Nav.Breadcrumb.DS"
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Home", // STRING
+                                            url: "index.html#mashup=ABB.LandingPageAccessAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Affected Objects", // STRING
+                                            url: "index.html#mashup=ABB.MyTasksAffectedItems_Mashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.MyTasksAffectedItems_Mashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getBreadCrumData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.Nav.Breadcrumb.DS"
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Home", // STRING
+                                            url: "index.html#mashup=ABB.LandingPageAccessAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "My ABB Tasks", // STRING
+                                            url: "index.html#mashup=ABB.Nav.RequestAChangeInnerMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.Nav.RequestAChangeInnerMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getChangeRequestDetailsByID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var changeRequestDetails = Things["ABB-windchill-OData-connector"].getChangeRequestByID({
+                                        	ID: changeRequestId
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ChangeRequestDetails)
+                                        let changeRequestInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ChangeRequestDetails"
+                                        });
+                                        
+                                        function getValueOrEmpty(value) {
+                                          return value == "" ||  value == undefined ? "-" : value;
+                                        }
+                                        
+                                        function getDynamicDisplay(dataObject, mainProperty, subProperty) {
+                                          return (dataObject && dataObject[mainProperty]) ? 
+                                            getValueOrEmpty(dataObject[mainProperty][subProperty]) : "-";
+                                        }
+                                        
+                                        
+                                        
+                                        changeRequestInfoTable.AddRow({
+                                        	NonRecurringCost: getValueOrEmpty(changeRequestDetails.NonRecurringCost), // STRING
+                                        	RecurringCost: getValueOrEmpty(changeRequestDetails.RecurringCost), // STRING
+                                        	Description: getValueOrEmpty(changeRequestDetails.Description), // STRING
+                                        	ModifiedBy: getValueOrEmpty(changeRequestDetails.ModifiedBy), // STRING
+                                        	Name: getValueOrEmpty(changeRequestDetails.Name), // STRING
+                                        	ProposedSolution: getValueOrEmpty(changeRequestDetails.ProposedSolution), // STRING
+                                        	CreatedBy: getValueOrEmpty(changeRequestDetails.CreatedBy), // STRING
+                                        	TeamTemplateName: getValueOrEmpty(changeRequestDetails.TeamTemplateName), // STRING
+                                        	Category: getDynamicDisplay(changeRequestDetails, "Category", "Display"), // STRING    
+                                        	State: getDynamicDisplay(changeRequestDetails, "State", "Display"), // STRING
+                                        	Complexity: getDynamicDisplay(changeRequestDetails, "Complexity", "Display"), // STRING
+                                        	RequestPriority: getDynamicDisplay(changeRequestDetails, "RequestPriority", "Display"), // STRING
+                                        	NeedDate: dateFormat(parseDateISO(changeRequestDetails.NeedDate), "dd-MM-yyyy hh:mm:ss.SSS") // STRING
+                                        });
+                                        
+                                        result = changeRequestInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getChangeRequestID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var changeRequestID = Things["ABB-windchill-OData-connector"].getWorkItemSubject({WorkItemId:WorkItemId});
+                                        
+                                        // dateValue:DATETIME
+                                        let dateValue = new Date();
+                                        
+                                        // dateFormat(dateValue:DATETIME, dateFormat:STRING):STRING
+                                        let formattedDate = dateFormat(new Date(), "yyyy-MM-dd hh:mm:ss.sss");
+                                        
+                                        
+                                        result = {
+                                            "timeStamp": formattedDate,
+                                            "data": [
+                                                {
+                                                    "itemListsData": [
+                                                        {
+                                                            "items": [
+                                                                {
+                                                                    "id": {
+                                                                        "value": changeRequestID.ID
+                                                                    },
+                                                                    "subjectName": {
+                                                                        "value": changeRequestID.SubjectName
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "objectType": "PTC.ChangeMgmt.ChangeRequest"
+                                                        }
+                                                    ],
+                                                    "adapter": {
+                                                        "instanceName": "windchill",
+                                                        "thingName": "PTC.WCAdapter"
+                                                    }
+                                                }
+                                            ],
+                                            "version": "1.0.0",
+                                            "statusMessage": "OK",
+                                            "status": "200"
+                                        };
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCSRFToken">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let TokenJSON = Things["ABB-windchill-OData-connector"].getCSRFToken();
+                                        result = TokenJSON.NonceValue;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProblemReportAttachmentsById">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var problemReportAttachmentDetails = Things["ABB-windchill-OData-connector"].getProblemReportAttachmentsById({
+                                        	$skip: undefined /* INTEGER {"dataShape":""} */,
+                                        	$top: undefined /* INTEGER {"dataShape":""} */,
+                                        	$filter: undefined /* STRING {"dataShape":""} */,
+                                        	$orderby: undefined /* STRING {"dataShape":""} */,
+                                        	$expand: undefined /* STRING {"dataShape":""} */,
+                                        	ProblemReportId: problemReportId /* STRING [Required] {"dataShape":""} */,
+                                        	$count: undefined /* BOOLEAN {"dataShape":""} */,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        var data = problemReportAttachmentDetails.value;
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ProblemReportAffectedObjectDetails)
+                                        let problemAttachmentsInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ProblemReportAttachmentsDetails"
+                                        });
+                                        
+                                        for (i = 0; i < data.length; i++) {
+                                            var URL = data[i].Content.URL;
+                                            URL = URL.replace("/sslClientAuth", "");
+                                        	problemAttachmentsInfoTable.AddRow({        
+                                        		Name: "<a href='"+URL+"' style='text-decoration: none; color: #0094c8;'> <p style='font-size: 1rem;'>  <b>" + data[i].FileName + "</b> </p> </a>", // STRING
+                                        		FileSize: data[i].FileSize, // STRING
+                                                Description: data[i].Description,// STRING
+                                        		LastModified: dateFormat(parseDateISO(data[i].LastModified), "dd-MM-yyyy hh:mm:ss.SSS"), // STRING
+                                        		ModifiedBy: data[i].ModifiedBy, // STRING
+                                        		ExternalLocation: "", // STRING		
+                                        	});
+                                        }
+                                        
+                                        result = problemAttachmentsInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getProblemReportDetailsByID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var problemReport = Things["ABB-windchill-OData-connector"].getReportProblemByID({
+                                        	ID: changeRequestId
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ProblemReportDetails)
+                                        let problemReportInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ProblemReportDetails"
+                                        });
+                                        
+                                        problemReportInfoTable.AddRow({
+                                        	Description: problemReport.Description, // STRING
+                                        	ModifiedBy: problemReport.ModifiedBy, // STRING
+                                        	Name: problemReport.Name, // STRING
+                                        	CreatedBy: problemReport.CreatedBy, // STRING
+                                        	TeamTemplateName: problemReport.TeamTemplateName, // STRING
+                                        	Category: problemReport.Category == undefined ||  problemReport.Category == "" ? '-':problemReport.Category.Display, // STRING
+                                        	State: problemReport.State == undefined || problemReport.State == "" ? '-':problemReport.State.Display, // STRING
+                                        	ChangeAdminI: problemReport.ChangeAdminI == undefined || problemReport.ChangeAdminI == "" ? '-': problemReport.ChangeAdminI[0].DisplayName, // STRING
+                                        	IssuePriority: problemReport.IssuePriority == undefined || problemReport.IssuePriority == "" ? '-': problemReport.IssuePriority.Display, // STRING
+                                        	NeedDate: problemReport.NeedDate == undefined || problemReport.NeedDate == "" ? '-':  dateFormat(parseDateISO(problemReport.NeedDate), "dd-MM-yyyy hh:mm:ss.SSS"), // STRING
+                                        	ObjectType: problemReport.ObjectType, // STRING
+                                            Identity : problemReport.Identity, // STRING
+                                        });
+                                        
+                                        
+                                        
+                                        result = problemReportInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getReportProblemAffectedDetailsById">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var problemReportDetails = Things["ABB-windchill-OData-connector"].getReportProblemAffectedObjectsById({
+                                        	$skip: undefined /* INTEGER {"dataShape":""} */ ,
+                                        	$top: undefined /* INTEGER {"dataShape":""} */ ,
+                                        	$filter: undefined /* STRING {"dataShape":""} */ ,
+                                        	$orderby: undefined /* STRING {"dataShape":""} */ ,
+                                        	$expand: undefined /* STRING {"dataShape":""} */ ,
+                                        	ProblemReportId: problemReportId /* STRING [Required] {"dataShape":""} */ ,
+                                        	$count: undefined /* BOOLEAN {"dataShape":""} */ ,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        var data = problemReportDetails.value;
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(ProblemReportAffectedObjectDetails)
+                                        let problemReportInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ProblemReportAffectedObjectDetails"
+                                        });
+                                        
+                                        for (i = 0; i < data.length; i++) {
+                                        	problemReportInfoTable.AddRow({
+                                        		Name: "<a style='text-decoration: none; color: #0094c8;'> <p style='font-size: 14px !important;'> <b> " + data[i].Name + "</b> </p> </a>", // STRING
+                                        		Number: data[i].Number, // STRING
+                                        		ObjectType: data[i].ObjectType, // STRING
+                                        		State: data[i].State.Display, // STRING
+                                        		Version: data[i].Version, // STRING
+                                        		Description: "", // STRING
+                                                ID: data[i].ID // STRING
+                                        	});
+                                        }
+                                        result = problemReportInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getWorkItemByID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var workDetails = Things["ABB-windchill-OData-connector"].getWorkItemDetailsByID({
+                                        	WorkItemId: WorkItemId
+                                        });
+                                        
+                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(WorkItemDetails)
+                                        let workDetailsInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "WorkItemDetails"
+                                        });
+                                        var index = workDetails.ProcessData.WorkitemRoutingChoices.length - 1;
+                                        
+                                        var activities = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	WorkItemId: WorkItemId
+                                        });
+                                        
+                                        let subjectName = me.getWorkItemSubjectByID({
+                                        	WorkItemId: WorkItemId /* STRING */
+                                        });
+                                        
+                                        var sp = activities.ProcessData.Variables == "" || activities.ProcessData.Variables == undefined ? "" : activities.ProcessData.Variables[0].Value;
+                                        
+                                        
+                                        workDetailsInfoTable.AddRow({
+                                        	Status: workDetails.Status.Display, // STRING
+                                        	Priority: workDetails.Priority, // STRING
+                                        	Role: workDetails.Role.Display, // STRING
+                                        	TaskName: workDetails.TaskName.includes("Analyze Problem Report") ? "Analyze Problem Report" : "-", // STRING
+                                        	DueDate: "_", // STRING
+                                        	ProcessDataComment: workDetails.ProcessData.WorkitemComment == undefined || workDetails.ProcessData.WorkitemComment == "" ? "" : workDetails.ProcessData.WorkitemComment, // STRING
+                                        	ProcessDataRouting: workDetails.ProcessData.WorkitemRoutingChoices[index] == undefined || workDetails.ProcessData.WorkitemRoutingChoices[index] == "" ? "" : workDetails.ProcessData.WorkitemRoutingChoices[index], // STRING
+                                        	Special_Instructions: sp, // STRING
+                                        	SubjectName: subjectName, // STRING
+                                        	TaskType: activities.Name // STRING
+                                        });
+                                        
+                                        result = workDetailsInfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getWorkItemSubjectByID">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let subject = Things["ABB-windchill-OData-connector"].getWorkItemSubject({
+                                        	WorkItemId: WorkItemId /* STRING [Required] {"dataShape":""} */,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        
+                                        result = subject.SubjectName;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="PTC.CustomAccessAppThingShape"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <ThingProperties>
+                <appIcon>
+                    <Value>
+                    <![CDATA[
+                    https://cdn-icons-png.flaticon.com/512/5656/5656347.png
+                    ]]>
+                    </Value>
+                    <Timestamp>2024-08-25T08:31:03.289Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </appIcon>
+                <tailoringMashupName>
+                    <Value>
+                    <![CDATA[
+                    PTC.Nav.TailoringPageHeaderMashup&master=PTC.ContributeApps.Master&AddAdministratorToRoleList=true&TailoringPageContentMashupName=PTC.Nav.ViewMyTasks.TailoringPageMashup
+                    ]]>
+                    </Value>
+                    <Timestamp>2024-10-30T12:42:23.440Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </tailoringMashupName>
+                <useCaseNameToken>
+                    <Value>
+                    <![CDATA[
+                    My ABB Tasks
+                    ]]>
+                    </Value>
+                    <Timestamp>2024-08-26T05:13:40.203Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </useCaseNameToken>
+                <additionalMashup>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="Mashup description"
+                                     name="description"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="true"
+                                     baseType="MASHUPNAME"
+                                     description="Mashup name"
+                                     name="name"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <name>
+                                    <![CDATA[
+                                    ABB.MyTasksAppMashup
+                                    ]]>
+                                    </name>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2024-08-25T08:32:12.858Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </additionalMashup>
+                <useCaseTabToken>
+                    <Value></Value>
+                    <Timestamp>2024-09-03T06:48:06.725Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </useCaseTabToken>
+                <isTabReloadRequired>
+                    <Value>false</Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </isTabReloadRequired>
+                <isAppValidationRequired>
+                    <Value>false</Value>
+                    <Timestamp>2024-08-26T05:29:58.592Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </isAppValidationRequired>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

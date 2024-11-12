@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <StyleThemes>
+        <StyleTheme
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ABB.StyleTheme"
+         projectName="ABBProject"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "CustomCss" : {
+                "value" : "/* ------------------------------ Mashup Pop up ---------------------------*/\n.mashup-popup, .mashup-popup .popup-mashup-goes-here\n{\n    border-radius: 14px !important;\n}\n\n/* ------------------------------ Remove the Whiteboarder ---------------------------*/\n.ptcs-focus-overlay\n{\n    visibility: hidden !important;\n} \n.ptcs-wrapper:not([no-wc-style]):focus:not(.dummy):not(.dummy):not(.dummy)\n{\n    box-shadow: hidden !important;\n}\n\n/* ------------------------------ Drop Down ---------------------------*/\nptcs-dropdown::part(select-box) {\n    min-height : 30px;\n    border-color: #000000;\n    border-radius: 6px;\n}\n\n/* ------------------------------ Text Field ---------------------------*/\nptcs-textfield:not([no-wc-style]) {\n    min-height: 10px;\n    display: flex;\n    flex-flow: column nowrap;\n    align-content: center;\n    justify-content: center;\n    align-items: baseline;\n    padding: 1px;\n    border-radius: 6px;\n}\nptcs-textfield::part(text-box) {\n    border-color: #000000;\n    border-radius: 6px;\n}\n.widget-ptcstextfield::part(text-box) {\n    height: 30px;\n    min-height: 13px;\n    border-style: solid;\n    border-color: #000000;\n    border-radius: 6px;\n}\n.widget-ptcstextfield::part(text-box):not([disabled]):hover {\n    border-color: #000000;\n    border-radius: 6px;\n}\n.widget-ptcstextfield::part(text-box)::part(clear-button){\n    visibility: hidden;\n}\nptcs-textfield:focus-within::part(hint-text) {\n    display: none;\n}\n\n"
+              },
+              "props" : [ {
+                "name" : "e-button-common-min-height",
+                "value" : "28px"
+              }, {
+                "name" : "e-button-common-padding-bottom",
+                "value" : "0px"
+              }, {
+                "name" : "e-button-common-padding-top",
+                "value" : "0px"
+              }, {
+                "name" : "global-color-core-success",
+                "value" : "#28a745"
+              }, {
+                "name" : "global-color-core-primary",
+                "value" : "#007bff"
+              }, {
+                "name" : "global-color-core-danger",
+                "value" : "#dc3545"
+              }, {
+                "name" : "global-color-bg-disabled",
+                "value" : ""
+              }, {
+                "name" : "global-color-bg-hover",
+                "value" : ""
+              }, {
+                "name" : "global-color-bg-selected",
+                "value" : ""
+              }, {
+                "name" : "global-text-large-header-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-header-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-subheader-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-large-title-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-title-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-label-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-body-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-caption-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-link-fontfamily",
+                "value" : "\"Open Sans\",Arial,sans-serif"
+              }, {
+                "name" : "global-text-link-fontweight",
+                "value" : "600"
+              }, {
+                "name" : "global-text-label-fontweight",
+                "value" : "500"
+              }, {
+                "name" : "e-button-primary-hover-bordercolor",
+                "value" : "#007bff"
+              }, {
+                "name" : "e-button-primary-hover-backgroundcolor",
+                "value" : "#007bff"
+              }, {
+                "name" : "e-button-primary-pressed-backgroundcolor",
+                "value" : "#0055b0"
+              }, {
+                "name" : "e-button-primary-disabled-bordercolor",
+                "value" : "#007bff"
+              }, {
+                "name" : "e-button-primary-pressed-radius",
+                "value" : "6px"
+              }, {
+                "name" : "e-button-primary-disabled-radius",
+                "value" : "6px"
+              }, {
+                "name" : "e-button-primary-hover-radius",
+                "value" : "6px"
+              }, {
+                "name" : "e-button-primary-radius",
+                "value" : "6px"
+              }, {
+                "name" : "e-button-primary-fontcolor",
+                "value" : "rgba(255,255,255,1)"
+              }, {
+                "name" : "e-button-primary-disabled-fontcolor",
+                "value" : "rgba(255,255,255,1)"
+              }, {
+                "name" : "e-button-primary-disabled-backgroundcolor",
+                "value" : "rgba(192,192,192,1)"
+              }, {
+                "name" : "e-button-common-padding-left",
+                "value" : "10px"
+              }, {
+                "name" : "e-button-common-padding-right",
+                "value" : "10px"
+              }, {
+                "name" : "e-textfield-text-label-fontweight",
+                "value" : "600"
+              }, {
+                "name" : "e-textfield-min-height",
+                "value" : "28px"
+              }, {
+                "name" : "e-list-bordercolor",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-list-row-bordercolor",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-list-text-label-fontweight",
+                "value" : "600"
+              }, {
+                "name" : "e-dropdown-min-height",
+                "value" : "28px"
+              }, {
+                "name" : "e-grid-horz-top-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-horz-top-border-width",
+                "value" : "1px"
+              }, {
+                "name" : "e-grid-horz-bottom-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-vert-left-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-vert-left-border-width",
+                "value" : "1px"
+              }, {
+                "name" : "e-grid-vert-right-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-vert-right-border-width",
+                "value" : "1px"
+              }, {
+                "name" : "e-grid-header-horz-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-header-horz-border-width",
+                "value" : "1px"
+              }, {
+                "name" : "e-grid-header-vert-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-body-horz-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-body-vert-border-color",
+                "value" : "rgba(0,0,0,1)"
+              }, {
+                "name" : "e-grid-body-vert-border-width",
+                "value" : "1px"
+              }, {
+                "name" : "e-grid-text-fontsize",
+                "value" : "12px"
+              }, {
+                "name" : "e-grid-header-label-fontweight",
+                "value" : "600"
+              }, {
+                "name" : "e-grid-header-label-fontsize",
+                "value" : "14px"
+              }, {
+                "name" : "e-textarea-padding-bottom",
+                "value" : "0px"
+              }, {
+                "name" : "e-textarea-padding-left",
+                "value" : "0px"
+              }, {
+                "name" : "e-textarea-padding-right",
+                "value" : "0px"
+              }, {
+                "name" : "e-textarea-padding-top",
+                "value" : "0px"
+              }, {
+                "name" : "e-textfield-padding-bottom",
+                "value" : "0px"
+              }, {
+                "name" : "e-textfield-padding-left",
+                "value" : "0px"
+              }, {
+                "name" : "e-textfield-padding-right",
+                "value" : "0px"
+              }, {
+                "name" : "e-textfield-padding-top",
+                "value" : "0px"
+              }, {
+                "name" : "e-button-secondary-hover-backgroundcolor",
+                "value" : "#adb5bd"
+              }, {
+                "name" : "e-button-secondary-hover-bordercolor",
+                "value" : "#adb5bd"
+              }, {
+                "name" : "e-button-secondary-pressed-backgroundcolor",
+                "value" : "#adb5bd"
+              }, {
+                "name" : "e-button-secondary-pressed-bordercolor",
+                "value" : "#adb5bd"
+              }, {
+                "name" : "e-button-secondary-disabled-bordercolor",
+                "value" : "#adb5bd"
+              }, {
+                "name" : "e-list-row-backgroundcolor-selected",
+                "value" : "rgba(221,227,233,1)"
+              }, {
+                "name" : "e-list-row-backgroundcolor-hover",
+                "value" : "rgba(221,227,233,1)"
+              } ],
+              "version" : "0.1"
+            }
+            ]]>
+            </content>
+            <preview></preview>
+        </StyleTheme>
+    </StyleThemes>
+</Entities>

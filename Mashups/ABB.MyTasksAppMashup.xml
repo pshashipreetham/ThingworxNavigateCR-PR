@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="ABB.MyTasksAppMashup"
+         projectName="ABBProject"
+         rows="0.0"
+         tags="TWXNavigate:Navigate;PTC:Navigate;TWXNavigate:AppMashup;PTC:ROLE_BASED_APPS">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="NavigateOrganization:Manufacturing"
+                     type="OrganizationalUnit"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height></height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width></width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="tailoringMashup"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="IN"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="tasksCollectionName"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "ConfigurationTables" : { },
+              "CustomMashupCss" : ".itemlist-title-label > ptcs-label::part(label) {\n    font-family: Arial, sans-serif !important;\n    font-weight: normal !important;\n    font-size: 24px!important;\n}\n\nptcs-breadcrumb {\n        margin-left: -16px !important; \n}",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_ABBTasksAppThing" : {
+                  "DataName" : "Things_ABBTasksAppThing",
+                  "EntityName" : "ABBTasksAppThing",
+                  "EntityType" : "Things",
+                  "Id" : "8d76575a-87f2-482f-875d-ee481c98aa8b",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "79bbb4e6-c511-4bef-a545-8dbc444ea588",
+                    "Name" : "getBreadCrumData",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "getBreadCrumData"
+                  } ]
+                },
+                "Things_NavigateBreadcrumbThing" : {
+                  "DataName" : "Things_NavigateBreadcrumbThing",
+                  "EntityName" : "NavigateBreadcrumbThing",
+                  "EntityType" : "Things",
+                  "Id" : "666b98f5-caad-49de-acc0-1eb2b1c45240",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "db441b52-0ed5-4e1f-95bf-e3ce3b4e7ec4",
+                    "Name" : "getBreadcrumbData",
+                    "Parameters" : {
+                      "lastNodeIndex" : "1"
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "getBreadcrumbData"
+                  } ]
+                },
+                "Things_PTC.ContributeAccessAppThing" : {
+                  "DataName" : "Things_PTC.ContributeAccessAppThing",
+                  "EntityName" : "PTC.ContributeAccessAppThing",
+                  "EntityType" : "Things",
+                  "Id" : "10798f6f-3a29-4ffb-987d-2a90e0ee6e19",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "c045e271-b0e3-4b90-b484-7e1133b5b7a4",
+                    "Name" : "IsAppCollectionPermitted",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "IsAppCollectionPermitted"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "41aa374e-769a-49c4-8f84-18ce9620daf3",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "MashupName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Field"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "textbox-25",
+                "SourceSection" : "",
+                "TargetArea" : "Session",
+                "TargetId" : "Session",
+                "TargetSection" : "Session"
+              }, {
+                "Id" : "20c2c1dc-39be-4c4a-afbc-da2eb6a9fa58",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "tailoringMashup",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "collectionName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "IsAppCollectionPermitted",
+                "TargetSection" : "Things_PTC.ContributeAccessAppThing"
+              }, {
+                "Id" : "0a20b241-ee56-4d3f-a334-55122893dcdc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "result",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "isPermitted",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "IsAppCollectionPermitted",
+                "SourceSection" : "Things_PTC.ContributeAccessAppThing",
+                "TargetArea" : "UI",
+                "TargetId" : "validator2-28",
+                "TargetSection" : ""
+              }, {
+                "Id" : "208d95ef-e2b8-4c3d-b135-d5fc5e2540db",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "property",
+                  "TargetProperty" : "Message",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression2-35",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "statusmessage-32",
+                "TargetSection" : ""
+              }, {
+                "Id" : "636ed988-2652-44c2-9c59-6ccf5d83485d",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "property",
+                  "TargetProperty" : "displayingMsg",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression2-35",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "validator2-34",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ac2c771f-5c4d-44c6-b2f4-37329501996e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "getBreadCrumData",
+                "SourceSection" : "Things_ABBTasksAppThing",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcsbreadcrumb-31",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_PTC.ContributeAccessAppThing",
+                "EventHandlerService" : "IsAppCollectionPermitted",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "110ffa6d-2f56-4189-a02d-0f50fc50c46e"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "expression2-26",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator2-28",
+                "EventTriggerSection" : "",
+                "Id" : "206b82f6-7d70-4a39-adc1-5cc3bfe96196"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator2-28",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "IsAppCollectionPermitted",
+                "EventTriggerSection" : "Things_PTC.ContributeAccessAppThing",
+                "Id" : "28526cec-6e02-4bd1-a898-cba5cf4dd196"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_NavigateBreadcrumbThing",
+                "EventHandlerService" : "getBreadcrumbData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "f958f65a-990e-48ec-8f4f-987550fe2e7f"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "validator2-34",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Changed",
+                "EventTriggerId" : "expression2-35",
+                "EventTriggerSection" : " ",
+                "Id" : "8b24651b-5f52-4aea-a3ce-fa17ad66f9e6"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "expression2-35",
+                "EventHandlerService" : "Evaluate",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "9286d285-5dc4-4977-9f90-63ad6cf29e6e"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "statusmessage-32",
+                "EventHandlerService" : "ShowMessage",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "True",
+                "EventTriggerId" : "validator2-34",
+                "EventTriggerSection" : " ",
+                "Id" : "414d810a-f75e-4f90-8bca-cdbc985e6a43"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigationfunction-37",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "False",
+                "EventTriggerId" : "validator2-28",
+                "EventTriggerSection" : "",
+                "Id" : "a34fff17-ef6f-4d87-8acc-ebe8fc5ba280"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_ABBTasksAppThing",
+                "EventHandlerService" : "getBreadCrumData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "7748907e-05c9-482b-97f5-75f14650b21c"
+              } ],
+              "Reminders" : [ {
+                "area" : "Mashup",
+                "category" : "migration",
+                "id" : "mashup-root.migration.mashup.info",
+                "msgKey" : "tw.mb.migration.messages.legacy-functions-migrated",
+                "msgParams" : { },
+                "severity" : "info",
+                "status" : "pending",
+                "type" : "mashup",
+                "widgetId" : "mashup-root"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisableLegacyCustomClassStyles" : false,
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "LegacyFocus" : true,
+                  "Margin" : "",
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "Master" : "ABB.ContributeApps.Master",
+                  "MigratedOn" : "2023-12-26T08:51:28.000Z",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "ptcsbreadcrumb-31" : {
+                        "parts" : {
+                          "link" : {
+                            "first-link" : {
+                              "padding-left" : "0px"
+                            }
+                          }
+                        },
+                        "widget" : "ptcs-breadcrumb"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : true,
+                  "UseThemeForHybrids" : true,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "DefaultValue" : "CHANGE MANAGEMENT TASKS COLLECTION",
+                    "Description" : "",
+                    "ParameterName" : "tasksCollectionName"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "IN",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "DefaultValue" : "ContributeCollectionTailoringMashup",
+                    "Description" : "",
+                    "ParameterName" : "tailoringMashup"
+                  } ],
+                  "id_index" : 37,
+                  "supportsAutoResize" : true,
+                  "tailoringMashup" : "ContributeCollectionTailoringMashup",
+                  "tasksCollectionName" : "CHANGE MANAGEMENT TASKS COLLECTION"
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CollapseTabIcon" : "",
+                    "DisableLegacyCustomClassStyles" : false,
+                    "DisplayName" : "container-2",
+                    "EnableContainerUnload" : false,
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "ExpandTabIcon" : "",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "LazyLoading" : false,
+                    "Margin" : "",
+                    "Overlay" : false,
+                    "OverrideChildrenAbsolute" : false,
+                    "ResponsiveLayout" : true,
+                    "Scrolling" : "auto-scroll",
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "ShowVerticalScrollbar" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "row",
+                    "flex-grow" : "1",
+                    "flex-height" : 0,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 1,
+                    "flex-size" : "default",
+                    "flex-width" : 0,
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "isLocked" : true,
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "CollapseTabIcon" : "",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "container-26",
+                      "EnableContainerUnload" : false,
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "ExpandTabIcon" : "",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-26",
+                      "LastContainer" : true,
+                      "LazyLoading" : false,
+                      "Margin" : "",
+                      "Overlay" : false,
+                      "OverrideChildrenAbsolute" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ShowVerticalScrollbar" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : "1",
+                      "flex-height" : 0,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : "1",
+                      "flex-size" : "default",
+                      "flex-width" : 0,
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "CollapseTabIcon" : "",
+                        "DisableLegacyCustomClassStyles" : false,
+                        "DisplayName" : "container-25",
+                        "EnableContainerUnload" : false,
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "ExpandTabIcon" : "",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-25",
+                        "LastContainer" : false,
+                        "LazyLoading" : false,
+                        "Margin" : "",
+                        "Overlay" : false,
+                        "OverrideChildrenAbsolute" : false,
+                        "ResponsiveLayout" : false,
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "ShowVerticalScrollbar" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Responsive Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "row",
+                        "flex-grow" : "1",
+                        "flex-max-height" : "",
+                        "flex-max-width" : "28px",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "28px",
+                        "flex-shrink" : "1",
+                        "flex-size" : "fixed",
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer-fixed",
+                        "isLocked" : false,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ ]
+                    }, {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "CollapseTabIcon" : "",
+                        "DisableLegacyCustomClassStyles" : false,
+                        "DisplayName" : "container-24",
+                        "EnableContainerUnload" : false,
+                        "EnableExpandCollapse" : false,
+                        "ExpandCollapseTabLocation" : "inside",
+                        "ExpandTabIcon" : "",
+                        "Expanded" : true,
+                        "Id" : "flexcontainer-24",
+                        "LastContainer" : true,
+                        "LazyLoading" : false,
+                        "Margin" : "",
+                        "Overlay" : false,
+                        "OverrideChildrenAbsolute" : false,
+                        "ResponsiveLayout" : false,
+                        "Scrolling" : "auto-scroll",
+                        "ShowDataLoading" : true,
+                        "ShowExpandCollapseTab" : false,
+                        "ShowVerticalScrollbar" : false,
+                        "SourceURL" : "",
+                        "Style" : "DefaultContainerStyle",
+                        "StyleProperties" : { },
+                        "Type" : "flexcontainer",
+                        "UseTheme" : true,
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Responsive Container",
+                        "align-content" : "flex-start",
+                        "align-items" : "flex-start",
+                        "flex-basis" : "auto",
+                        "flex-direction" : "column",
+                        "flex-grow" : "1",
+                        "flex-height" : 0,
+                        "flex-max-height" : "",
+                        "flex-max-width" : "",
+                        "flex-min-height" : "",
+                        "flex-min-width" : "",
+                        "flex-shrink" : 1,
+                        "flex-size" : "default",
+                        "flex-width" : 0,
+                        "flex-wrap" : "nowrap",
+                        "iconClass" : "widgets-flexcontainer",
+                        "isLocked" : true,
+                        "justify-content" : "flex-start",
+                        "positioning" : "responsive",
+                        "userCannotRemove" : false
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CollapseTabIcon" : "",
+                          "DisableLegacyCustomClassStyles" : false,
+                          "DisplayName" : "container-9",
+                          "EnableContainerUnload" : false,
+                          "EnableExpandCollapse" : false,
+                          "ExpandCollapseTabLocation" : "inside",
+                          "ExpandTabIcon" : "",
+                          "Expanded" : true,
+                          "Id" : "flexcontainer-9",
+                          "LastContainer" : false,
+                          "LazyLoading" : false,
+                          "Margin" : "",
+                          "Overlay" : false,
+                          "OverrideChildrenAbsolute" : false,
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "ShowVerticalScrollbar" : false,
+                          "SourceURL" : "",
+                          "Style" : "DefaultContainerStyle",
+                          "StyleProperties" : { },
+                          "Type" : "flexcontainer",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Responsive Container",
+                          "align-content" : "flex-start",
+                          "align-items" : "flex-start",
+                          "flex-basis" : "auto",
+                          "flex-direction" : "row",
+                          "flex-grow" : "0",
+                          "flex-height" : 0,
+                          "flex-max-height" : "",
+                          "flex-max-width" : "",
+                          "flex-min-height" : "",
+                          "flex-min-width" : "",
+                          "flex-shrink" : "1",
+                          "flex-size" : "default",
+                          "flex-width" : 0,
+                          "flex-wrap" : "nowrap",
+                          "iconClass" : "widgets-flexcontainer",
+                          "isLocked" : false,
+                          "justify-content" : "flex-start",
+                          "positioning" : "responsive",
+                          "userCannotRemove" : false
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "Counter" : false,
+                            "CriteriaMessage" : "",
+                            "CriteriaMessageDetails" : "",
+                            "Description" : "",
+                            "DisableLegacyCustomClassStyles" : false,
+                            "Disabled" : false,
+                            "DisplayName" : "textbox-25",
+                            "FocusOnLoad" : false,
+                            "HasText" : false,
+                            "Height" : 25,
+                            "HintText" : "",
+                            "Id" : "textbox-25",
+                            "Label" : "",
+                            "LabelAlignment" : "left",
+                            "LastContainer" : false,
+                            "Left" : 55,
+                            "Margin" : "5",
+                            "MaxLengthFailureMessage" : "[[Widgets.Validation.MaxLengthFailureMessage]]",
+                            "MaxNumberOfCharacters" : 1000000,
+                            "MinLengthFailureMessage" : "[[Widgets.Validation.MinLengthFailureMessage]]",
+                            "Password" : false,
+                            "ReadOnly" : false,
+                            "RequiredMessage" : "[[Widgets.Validation.RequiredMessage]]",
+                            "ResponsiveLayout" : false,
+                            "ShowClearText" : true,
+                            "ShowDataLoading" : true,
+                            "ShowValidationCriteria" : false,
+                            "ShowValidationFailure" : false,
+                            "ShowValidationSuccess" : false,
+                            "SuccessMessage" : "",
+                            "SuccessMessageDetails" : "",
+                            "TabSequence" : 0,
+                            "Text" : "[[PTC.AccessApp.MyTasksAppTitle]]",
+                            "TextAlignment" : "left",
+                            "Top" : 255,
+                            "Type" : "ptcstextfield",
+                            "UseTheme" : true,
+                            "ValidationCriteriaIcon" : "cds:icon_info",
+                            "ValidationFailureIcon" : "cds:icon_error",
+                            "ValidationState" : "undefined",
+                            "ValidationSuccessIcon" : "cds:icon_success",
+                            "ValueRequired" : false,
+                            "Visible" : false,
+                            "Width" : 200,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Textbox"
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CollapseTabIcon" : "",
+                          "DisableLegacyCustomClassStyles" : false,
+                          "DisplayName" : "container-30",
+                          "EnableContainerUnload" : false,
+                          "EnableExpandCollapse" : false,
+                          "ExpandCollapseTabLocation" : "inside",
+                          "ExpandTabIcon" : "",
+                          "Expanded" : true,
+                          "HorizontalScrolling" : "no-scroll",
+                          "Id" : "flexcontainer-30",
+                          "LastContainer" : false,
+                          "LazyLoading" : false,
+                          "Margin" : "8 0 24 0",
+                          "Overlay" : false,
+                          "OverrideChildrenAbsolute" : false,
+                          "ResponsiveLayout" : false,
+                          "Scrolling" : "no-scroll",
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "ShowVerticalScrollbar" : false,
+                          "SourceURL" : "",
+                          "Style" : "DefaultContainerStyle",
+                          "StyleProperties" : { },
+                          "Type" : "flexcontainer",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Responsive Container",
+                          "align-content" : "flex-start",
+                          "align-items" : "flex-start",
+                          "flex-basis" : "auto",
+                          "flex-direction" : "row",
+                          "flex-grow" : "0",
+                          "flex-max-height" : "66px",
+                          "flex-max-width" : "",
+                          "flex-min-height" : "66px",
+                          "flex-min-width" : "",
+                          "flex-shrink" : 0,
+                          "flex-size" : "fixed",
+                          "flex-wrap" : "nowrap",
+                          "iconClass" : "widgets-flexcontainer-fixed",
+                          "isLocked" : false,
+                          "justify-content" : "flex-start",
+                          "positioning" : "responsive",
+                          "userCannotRemove" : false
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "DisableLegacyCustomClassStyles" : false,
+                            "Disabled" : false,
+                            "DisplayField" : "displayName",
+                            "DisplayName" : "ptcs-breadcrumb-31",
+                            "FillContainer" : true,
+                            "Height" : 34,
+                            "Id" : "ptcsbreadcrumb-31",
+                            "LastClickedIndex" : -1,
+                            "LastContainer" : false,
+                            "Left" : 55,
+                            "LinkMaxWidth" : 120,
+                            "Margin" : "0",
+                            "MashupControl" : "pagemashup",
+                            "MashupNameField" : "mashupName",
+                            "MaxNumberOfLinks" : 4,
+                            "ResponsiveLayout" : true,
+                            "ShowCurrentLevel" : true,
+                            "ShowDataLoading" : true,
+                            "TabSequence" : -1,
+                            "Top" : 40,
+                            "TruncateLinks" : false,
+                            "Type" : "ptcsbreadcrumb",
+                            "TypeField" : "type",
+                            "URLField" : "url",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "VisibleBoundsTruncation" : true,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Breadcrumb"
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CollapseTabIcon" : "",
+                          "DisableLegacyCustomClassStyles" : false,
+                          "DisplayName" : "container-8",
+                          "EnableContainerUnload" : false,
+                          "EnableExpandCollapse" : false,
+                          "ExpandCollapseTabLocation" : "inside",
+                          "ExpandTabIcon" : "",
+                          "Expanded" : true,
+                          "Id" : "flexcontainer-8",
+                          "LastContainer" : false,
+                          "LazyLoading" : false,
+                          "Margin" : "",
+                          "Overlay" : false,
+                          "OverrideChildrenAbsolute" : false,
+                          "ResponsiveLayout" : false,
+                          "Scrolling" : "auto-scroll",
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "ShowVerticalScrollbar" : false,
+                          "SourceURL" : "",
+                          "Style" : "DefaultContainerStyle",
+                          "StyleProperties" : { },
+                          "Type" : "flexcontainer",
+                          "UseTheme" : true,
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Responsive Container",
+                          "align-content" : "flex-start",
+                          "align-items" : "flex-start",
+                          "flex-basis" : "auto",
+                          "flex-direction" : "row",
+                          "flex-grow" : "1",
+                          "flex-height" : 0,
+                          "flex-max-height" : "",
+                          "flex-max-width" : "",
+                          "flex-min-height" : "",
+                          "flex-min-width" : "",
+                          "flex-shrink" : 1,
+                          "flex-size" : "default",
+                          "flex-width" : 0,
+                          "flex-wrap" : "nowrap",
+                          "iconClass" : "widgets-flexcontainer",
+                          "isLocked" : false,
+                          "justify-content" : "flex-start",
+                          "positioning" : "responsive",
+                          "userCannotRemove" : true
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "Configuration" : {
+                              "configurationKey" : "taskList",
+                              "delta" : {
+                                "attributes" : {
+                                  "inTailoring" : true,
+                                  "selectedValues" : {
+                                    "data" : [ {
+                                      "adapter" : {
+                                        "instanceName" : "windchill",
+                                        "thingName" : "PTC.WCAdapter"
+                                      },
+                                      "itemListsData" : [ {
+                                        "items" : [ {
+                                          "additionalData" : {
+                                            "implementationAttributesDefinition" : {
+                                              "linkToMashup" : {
+                                                "mashupName" : "ABB.MyTaskItemDeatils"
+                                              }
+                                            },
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : ""
+                                              }
+                                            }
+                                          },
+                                          "id" : "Activity|Name",
+                                          "ordinal" : 0
+                                        }, {
+                                          "additionalData" : {
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : ""
+                                              }
+                                            }
+                                          },
+                                          "id" : "Subject|SubjectName",
+                                          "ordinal" : 1
+                                        }, {
+                                          "additionalData" : {
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : ""
+                                              }
+                                            }
+                                          },
+                                          "id" : "Activity|Deadline",
+                                          "ordinal" : 2
+                                        }, {
+                                          "additionalData" : {
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : ""
+                                              }
+                                            }
+                                          },
+                                          "id" : "Status#Display",
+                                          "ordinal" : 3
+                                        }, {
+                                          "additionalData" : {
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : ""
+                                              }
+                                            }
+                                          },
+                                          "id" : "Activity|Context|Name",
+                                          "ordinal" : 4
+                                        }, {
+                                          "additionalData" : {
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : ""
+                                              }
+                                            }
+                                          },
+                                          "id" : "Assigned",
+                                          "ordinal" : 5
+                                        } ],
+                                        "objectType" : "PTC.Workflow.WorkItem"
+                                      }, {
+                                        "items" : [ {
+                                          "additionalData" : {
+                                            "itemListAttributesDefinition" : {
+                                              "fieldTitleOverride" : {
+                                                "value" : "[[PTC.Nav.TaskList.TaskProgress]]"
+                                              }
+                                            }
+                                          },
+                                          "id" : "TaskProgress",
+                                          "ordinal" : 6
+                                        } ],
+                                        "objectType" : "PTC.Workflow.WorkItem.Custom.Implementation"
+                                      } ]
+                                    } ]
+                                  }
+                                },
+                                "baseConfigurationVersion" : {
+                                  "value" : "nav.3"
+                                },
+                                "defaultSortFields" : {
+                                  "selectedValues" : {
+                                    "data" : [ {
+                                      "adapter" : {
+                                        "instanceName" : "windchill",
+                                        "thingName" : "PTC.WCAdapter"
+                                      },
+                                      "itemListsData" : [ {
+                                        "items" : [ {
+                                          "additionalData" : {
+                                            "itemListDefaultSortFieldDefinition" : {
+                                              "defaultSortDirection" : {
+                                                "selectedKey" : "asc"
+                                              }
+                                            }
+                                          },
+                                          "id" : "LastModified",
+                                          "ordinal" : 6
+                                        } ],
+                                        "objectType" : "PTC.Workflow.WorkItem"
+                                      } ]
+                                    } ]
+                                  }
+                                },
+                                "implementationConfigurationVersion" : {
+                                  "value" : "nav.1"
+                                },
+                                "maxNumberOfRowsInGrid" : {
+                                  "inTailoring" : true,
+                                  "value" : 300
+                                }
+                              },
+                              "implementationThingName" : "PTC.Nav.TaskListBusinessLogicThing"
+                            },
+                            "DisplayName" : "MyTasksItemListWidget",
+                            "FillContainer" : true,
+                            "Id" : "ptcnavitemlistwidget-36",
+                            "Input" : { },
+                            "LastContainer" : false,
+                            "Left" : 113,
+                            "Margin" : "",
+                            "ResponsiveLayout" : true,
+                            "RuntimeConfiguration" : { },
+                            "SelectedItems" : { },
+                            "ShowDataLoading" : true,
+                            "TailoringName" : "taskListTailoring",
+                            "Top" : 39,
+                            "Type" : "ptc-nav-item-list-widget",
+                            "UseTheme" : true,
+                            "Visible" : true,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Item List",
+                            "_baseVersion" : "9.4.0-1672948421"
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "CollapseTabIcon" : "",
+                      "DisableLegacyCustomClassStyles" : false,
+                      "DisplayName" : "container-27",
+                      "EnableContainerUnload" : false,
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "ExpandTabIcon" : "",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-27",
+                      "LastContainer" : false,
+                      "LazyLoading" : false,
+                      "Margin" : "",
+                      "Overlay" : false,
+                      "OverrideChildrenAbsolute" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "ShowVerticalScrollbar" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : "1",
+                      "flex-max-height" : "",
+                      "flex-max-width" : "28px",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "28px",
+                      "flex-shrink" : "1",
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "VALUE",
+                    "DefaultNumberEvaluation" : true,
+                    "DisplayName" : "ChangeMashupContainerNameExpression",
+                    "Expression" : "result = 'PTC.AppForbiddenMashup';",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-26",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_currentParameterDefs" : [ ],
+                    "editMode" : "edit",
+                    "helperType" : "expression",
+                    "is_permitted" : "false",
+                    "parameters" : [ ],
+                    "parametersToDelete" : [ ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DisplayName" : "IsAppCollectionPermittedValidator",
+                    "Expression" : "result = isPermitted;",
+                    "Height" : 28,
+                    "Id" : "validator2-28",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "",
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "validator2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : "true",
+                      "Description" : "",
+                      "ParameterName" : "isPermitted",
+                      "bindingDirection" : "",
+                      "bindingStatus" : true,
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "name" : "isPermitted",
+                      "value" : "true"
+                    } ],
+                    "editMode" : "edit",
+                    "helperType" : "validator",
+                    "isChangeNeeded" : "false",
+                    "isPermitted" : "true",
+                    "parameters" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : "true",
+                      "Description" : "",
+                      "ParameterName" : "isPermitted",
+                      "isValid" : true
+                    } ],
+                    "parametersToDelete" : [ ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "redirectLoadSuccessMessage",
+                    "Height" : 28,
+                    "Id" : "statusmessage-32",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "",
+                    "Message" : "",
+                    "MessageType" : "info",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "statusmessage",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Status Message"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : true,
+                    "DisplayName" : "isDisplayingSuccessStatusOnLoad",
+                    "Expression" : "if (displayingMsg === undefined || displayingMsg === null || displayingMsg === \"undefined\") {\n    result = false;\n} else {\n    result = true;\n}",
+                    "Height" : 28,
+                    "Id" : "validator2-34",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "",
+                    "Output" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "validator2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Validator",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "displayingMsg",
+                      "bindingDirection" : "",
+                      "bindingStatus" : true,
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "name" : "displayingMsg"
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : false,
+                    "DataChangeType" : "ALWAYS",
+                    "DefaultNumberEvaluation" : true,
+                    "DisplayName" : "getSessionParamDisplyingMsg",
+                    "Expression" : "let res = TW.sessionStorage.getItem(\"mashup.successStatusMsgAfterRedirect\");\n\nTW.sessionStorage.setItem(\"mashup.successStatusMsgAfterRedirect\", undefined);\n\nresult = res;\n\n",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression2-35",
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "Margin" : "",
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : 0,
+                    "Type" : "expression2",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_currentParameterDefs" : [ ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ClickOutsideToClose" : false,
+                    "CloseButton" : true,
+                    "DisplayName" : "navigateToForbiddenMashup",
+                    "Id" : "navigationfunction-37",
+                    "IncludeLegacyHeightAdjustment" : false,
+                    "LastContainer" : false,
+                    "Left" : 0,
+                    "LegacyHeightAdjustmentEnabled" : false,
+                    "Margin" : "",
+                    "MashupParameters" : [ ],
+                    "MissingMashupMessage" : "",
+                    "PopupHeight" : 0,
+                    "PopupScrollbar" : "auto",
+                    "PopupTitle" : "",
+                    "PopupWidth" : 0,
+                    "RedirectTo" : "url",
+                    "ReloadOnReplace" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TargetMashup" : "",
+                    "TargetWindowType" : "replace",
+                    "Text" : "tw.navigationfunction-ide.properties.text.default-value",
+                    "Top" : 0,
+                    "Type" : "navigationfunction",
+                    "URL" : "index.html?mashup=PTC.MyTasksAppMashup#master=PTC.ContributeApps.Master&mashup=PTC.AppForbiddenMashup",
+                    "URLTargetType" : "replace",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "navigationfunction",
+                    "_baseVersion" : "9.4.0-1672948421",
+                    "_currentParameterDefs" : [ ]
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

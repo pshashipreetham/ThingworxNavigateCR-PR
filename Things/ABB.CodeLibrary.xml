@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ABB.CodeLibrary"
+         projectName="ABBProject"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="MultipleButtonsVisiblity">
+                        <ResultType
+                         aspect.dataShape="ABB.Buttons.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="MultipleButtonsVisiblity">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ABB.Buttons.DS"
+                                        });
+                                        
+                                        let activies = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	WorkItemId: WorkItemId,
+                                        });
+                                        
+                                        let eventList = activies.UserEventList;
+                                        
+                                        let Clarify, 
+                                            Fast_Track_Approval,
+                                            FullTrackOfflineReview, 
+                                            FullTrackOnlineReview, 
+                                            Reassign, Reject,
+                                            FullTrackReview, 
+                                            Confirmed,
+                                            Clarification,
+                                            Duplicate,
+                                            Not_Reproducible,
+                                            Not_Verified,
+                                            Will_Not_Resolve,
+                                            Rejected,
+                                            Review = false;
+                                        
+                                        for(let x =0; x < eventList.length; x++)
+                                        {
+                                            if(eventList[x] == "Clarify") Clarify = true;
+                                            if(eventList[x] == "Review")  Review = true;
+                                            if(eventList[x] == "Full-Track Offline Review") FullTrackOfflineReview = true;
+                                            if(eventList[x] == "Full-Track Online Review") FullTrackOnlineReview = true;
+                                            if(eventList[x] == "Reject") Reject = true;
+                                            if(eventList[x] == "Full-Track Review") FullTrackReview = true;
+                                            if(eventList[x] == "Clarify") Fast_Track_Approval = true;
+                                            if(eventList[x] == "Reassign") Reassign = true;
+                                            if(eventList[x] == "Confirmed") Confirmed = true;
+                                            if(eventList[x] == "Clarification") Clarification = true;
+                                            if(eventList[x] == "Duplicate") Duplicate = true;
+                                            if(eventList[x] == "Not_Reproducible") Not_Reproducible = true;
+                                            if(eventList[x] == "Not_Verified") Not_Verified = true;
+                                            if(eventList[x] == "Will_Not_Resolve") Will_Not_Resolve = true;
+                                            if(eventList[x] == "Rejected") Rejected = true;
+                                        }
+                                        
+                                        let newEntry = {
+                                        	Clarify: Clarify, // BOOLEAN
+                                        	Reassign: Reassign, // BOOLEAN
+                                        	Reject: Reject, // BOOLEAN
+                                        	Review: Review, // BOOLEAN
+                                        	FastTrack_Approval: Fast_Track_Approval, // BOOLEAN
+                                        	FullTrack_Offline_Review: FullTrackOfflineReview, // BOOLEAN
+                                        	FullTrack_Online_Review: FullTrackOnlineReview, // BOOLEAN
+                                        	FullTrack_Review: FullTrackReview, // BOOLEAN
+                                        	Clarification: Clarification, // BOOLEAN
+                                        	Confirmed: Confirmed, // BOOLEAN
+                                        	Duplicate: Duplicate, // BOOLEAN
+                                        	NotReproducible: Not_Reproducible, // BOOLEAN
+                                        	NotVerified: Not_Verified, // BOOLEAN
+                                        	WillNotResolve: Will_Not_Resolve, // BOOLEAN
+                                            Rejected: Rejected
+                                        };
+                                        
+                                        result.AddRow(newEntry);
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

@@ -1,0 +1,2917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ABB.Helper"
+         projectName="ABBProject"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="R0lGODlhEAAQAMQAAAAAAP///wAAmQAzmQ1HkmKEqgBQMwCZAABmAJn/Zo3IWjNmAKiqnGBhU/34&#xA;zjMzM////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEA&#xA;ABAALAAAAAAQABAAAAVtICOO5NhAEOOsbLs+qMoS7huzQm2njlDoO9UgtyoYjQ4Yb7Y6rBAIx21F&#xA;XAEQCgXi5ms+s4rEVli9ZhGB7EK2omG1gYNicWDnAAa4fAFZ934reQl7BzdDLAV5cw58SzUGdCso&#xA;DQ+VlpUrC5IQIQA7"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="false"
+                     baseType="IMAGE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="CAD_DocumentsIcon"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="R0lGODlhEAAQANUyAPLy8uXl5fPz8+bm5pOowOjo6Onp6ZKnvurq6pu735Oy05a11pm53Ji32Z2+&#xA;4py94XKMqoypyefn50NYcoWiwZClvZy84H2YtzhMZVpyjmZ/nDBDW5Cuzpq63U5lf+Dg4Ovr6/Hx&#xA;8Z2+4/j4+PX19fn5+fb29vr6+v39/fT09Pz8/JGmvvv7+5Knv/7+/vf39yo8VP////Hx8QAAAAAA&#xA;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAADIALAAAAAAQABAAAAatQJlM&#xA;5HhYEh1GY6HgRCgXoSNGdVldKJX2BRE+qtgsi3UqgTRCS8yKEpNLI0RGmLAS7q186/BCeIQdYSpj&#xA;ZSMvLwYTQgxYBHp7KysmBhhCDS6Db4YvJiQFG0ILKCx6B5GRKQUwQgqDhYedKSkSqzIcKieQpxUV&#xA;AgO1ESpwsCSyAgC/QhQsm7EpxwABtRcnxMYAACHSQhAkCAYGBQUSAwMBAR+1GhkeExgbMPHy8UEAOw=="
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="false"
+                     baseType="IMAGE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="DocumentsIcon"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.defaultValue="R0lGODlhEAAQAKIAAJeZi2BhU+fp4Lq/sAAAAP///wAAAAAAACH5BAEAAAUALAAAAAAQABAAAANF&#xA;WLoVzvA1EZS0goasxSDLxo3ex4jkYJ6cE6hrg1YKABMgSi32Lbe8GwjjARh9LJgyNlkuhw0VTihl&#xA;4BSE1RWywEG5YG4CADs="
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="false"
+                     baseType="IMAGE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="PartsIcon"
+                     ordinal="4"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="breadCrumPartTaskCollections">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="mashupType"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="changeRequest_Validation">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Category"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ChangeScope"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Context"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Description"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Name"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="NeedDate"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="NonRecurringCost"
+                             ordinal="11"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="ProposedSolution"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Reason"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RecurringCost"
+                             ordinal="10"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="RequestPriority"
+                             ordinal="5"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="clearSession">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="completeWorkOrderById">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="special_instructions"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="UserEventList"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkitemComment"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DisableRouting">
+                        <ResultType
+                         aspect.dataShape="WorkItemActivities"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="fetchWorkItemEventList">
+                        <ResultType
+                         aspect.dataShape="ABB.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAffectedObjectList">
+                        <ResultType
+                         aspect.dataShape="ABB.AffectedItems.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="categoryInput"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.NameValue.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="contextInput"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="nameInput"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="numberInput"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAffectedObjectListCopy">
+                        <ResultType
+                         aspect.dataShape="ABB.AffectedItems.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="Process Plans"
+                             baseType="STRING"
+                             description=""
+                             name="categoryInput"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.NameValue.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="contextInput"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="nameInput"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="numberInput"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getAllUsers">
+                        <ResultType
+                         aspect.dataShape="ABB.windchillUsers.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getBreadCrum_MyTasks">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.Breadcrumb.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description=""
+                             name="CCOJson"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Mashup"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCategoryList">
+                        <ResultType
+                         aspect.dataShape="ABB.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getContextName">
+                        <ResultType
+                         aspect.dataShape="ABB.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.NameValue.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="getAllContexts"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getContexts">
+                        <ResultType
+                         aspect.dataShape="ABB.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getCSRFToken">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getFromPartAndAssignToSession">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getInstructions">
+                        <ResultType
+                         baseType="HTML"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getSession_AffectedObjects">
+                        <ResultType
+                         aspect.dataShape="ABB.AffectedItems.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getWorkItemActivities">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="parseSelectUser">
+                        <ResultType
+                         aspect.dataShape="ABB.NameValue.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.windchillUsers.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRow"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="POSTSelectedRows">
+                        <ResultType
+                         aspect.dataShape="ABB.AffectedItems.DS"
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="changeRequestID"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.AffectedItems.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedPartItems"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="problemReport_Validation">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Category"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Container"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Description"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Name"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="NeedDate"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Priority"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Reason"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Requester"
+                             ordinal="7"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="removeAffectedObjectsFromSession">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="replaceBreadCrumData">
+                        <ResultType
+                         aspect.dataShape="ABB.Breadcrumb.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="breadCrumData"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RoutingMashup">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="TaskType"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="rowEnabler">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="selectedAffectedObjects">
+                        <ResultType
+                         aspect.dataShape="ABB.selectedAffectedObjects.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="selectedRowsInfoTable">
+                        <ResultType
+                         aspect.dataShape="ABB.windchillUsers.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.windchillUsers.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="setToSession_AffectedObjects">
+                        <ResultType
+                         baseType="NOTHING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="test">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="UpdateWorkItem">
+                        <ResultType
+                         baseType="STRING"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Comment"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="objectType"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="special_instructions"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="UserEventList"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="WorkItemId"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="breadCrumPartTaskCollections">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.Nav.Breadcrumb.DS"
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Home", // STRING
+                                            url: "index.html#mashup=ABB.LandingPageAccessAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "MoGe Problem Report", // STRING
+                                            url: "index.html#mashup=ABB.Nav.CreateProblemReportAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.Nav.CreateProblemReportAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="changeRequest_Validation">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        function validateFields(fields) {
+                                            var requiredFields = {
+                                                Name: fields.name,
+                                                Context: fields.context,
+                                        //        Category: fields.category,
+                                        //        Reason: fields.reason,
+                                        //        RequestPriority: fields.requestPriority,
+                                        //        ChangeScope: fields.changeScope,
+                                        //        NeedDate: fields.needDate,
+                                        //        Description: fields.description,
+                                        //        ProposedSolution: fields.proposedSolution,
+                                        //        RecurringCost: fields.recurringCost,
+                                        //        NonRecurringCost: fields.nonRecurringCost
+                                            };
+                                        
+                                            var emptyFields = [];
+                                           
+                                            for (var field in requiredFields) {
+                                                if (requiredFields.hasOwnProperty(field)) {
+                                                    if (!requiredFields[field] || requiredFields[field].trim() === '') {
+                                                        emptyFields.push(
+                                                            '<li style="color: red;">' +
+                                                            '<strong>' + field + '</strong> is required.' +
+                                                            '</li>'
+                                                        );
+                                                    }
+                                                }
+                                            }
+                                        
+                                            if (emptyFields.length > 0) {
+                                                return '<ul style="padding-left: 20px; margin: 15px;">' + 
+                                                       emptyFields.join('') + // Join the list items without additional spaces
+                                                       '</ul>';
+                                            }
+                                        
+                                            return 'Success';
+                                        }
+                                        
+                                        var fieldValues = {
+                                            name: Name,
+                                            context: Context,
+                                        //    category: Category,
+                                        //    reason: Reason,
+                                        //    requestPriority: RequestPriority,
+                                        //    changeScope: ChangeScope,
+                                        //    needDate: dateFormat(new Date(NeedDate), "dd-MM-yyyy hh:mm:ss"),
+                                        //    description: Description,
+                                        //    proposedSolution: ProposedSolution,
+                                        //    recurringCost: RecurringCost,
+                                        //    nonRecurringCost: NonRecurringCost
+                                        };
+                                        
+                                        var validationMessage = validateFields(fieldValues);
+                                        result = validationMessage;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="clearSession">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.AffectedItems.DS"
+                                        });
+                                        
+                                        Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue({
+                                        	name: "affectedObjects" /* STRING */,
+                                        	value: result /* INFOTABLE */
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="completeWorkOrderById">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var CSRFToken = me.getCSRFToken();
+                                        
+                                        var jsonData = {};
+                                        
+                                        var EventList = [];
+                                        if (UserEventList !== "" && UserEventList !== undefined) {
+                                        	EventList[0] = UserEventList;
+                                        	jsonData = {
+                                        		"Variables": [{
+                                        			"Name": "special_instructions",
+                                        			"Value": special_instructions
+                                        		}],
+                                        		"UserEventList": EventList,
+                                        		"WorkitemComment": WorkitemComment,
+                                        		"VoteAction": "",
+                                        		"AutomateFastTrack": false
+                                        	};
+                                        } else {
+                                        	EventList = [];
+                                        	jsonData = {
+                                        		"Variables": [{
+                                        			"Name": "",
+                                        		}],
+                                        		"UserEventList": EventList,
+                                        		"WorkitemComment": WorkitemComment,
+                                        		"VoteAction": "",
+                                        		"AutomateFastTrack": false
+                                        	};
+                                        }
+                                        
+                                        logger.warn("completeWorkOrderById >> UserEventList " + UserEventList + " || WorkitemComment" + WorkitemComment);
+                                        var workOrderStatus = Things["ABB-windchill-OData-connector"].setCompleteWorkOrderById({
+                                        	WorkItemCompleteInfo: jsonData /* JSON {"dataShape":""} */ ,
+                                        	WorkItemId: WorkItemId /* STRING [Required] {"dataShape":""} */
+                                        });
+                                        
+                                        result = workOrderStatus.Status.Value;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="DisableRouting">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var routingList = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	WorkItemId: WorkItemId,
+                                        });
+                                        
+                                        var isAvailable;
+                                        if (routingList.UserEventList.length > 0) {
+                                        	isAvailable = true;
+                                        } else {
+                                        	isAvailable = false;
+                                        }
+                                        
+                                        let Activities_InfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable" /* STRING {"defaultValue":"InfoTable"} */ ,
+                                        	dataShapeName: "WorkItemActivities" /* DATASHAPENAME */
+                                        });
+                                        
+                                         Activities_InfoTable.AddRow({
+                                        	UserEventListAvailblity: isAvailable, // BOOLEAN
+                                        	Name: routingList.Name // STRING
+                                        });
+                                        
+                                        
+                                        
+                                        result = Activities_InfoTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="fetchWorkItemEventList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ABB.NameValue.DS"
+                                        });
+                                        
+                                        let activies = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	WorkItemId: WorkItemId,
+                                        });
+                                        
+                                        let eventList = activies.UserEventList;
+                                        
+                                        for (let x = 0; x < eventList.length; x++) {
+                                        	let newEntry = {
+                                        		name: eventList[x].replace(/[^a-zA-Z0-9 ]/g, " "), // STRING
+                                        		value: eventList[x] // STRING
+                                        	};
+                                        	result.AddRow(newEntry);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAffectedObjectList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Function to build filter string based on inputs (context, name, number)
+                                        function buildFilter(contextInput, nameInput, numberInput) 
+                                        {
+                                        	let filters = [];
+                                        
+                                        	try
+                                            {
+                                        		// Add name filter if provided
+                                        		if (nameInput)
+                                                {
+                                        			filters.push("contains(Name, '" + nameInput + "')");
+                                        		}
+                                        
+                                        		// Add context filters if provided
+                                        		if (contextInput) 
+                                                {
+                                        			let contextFilters = [];
+                                        			for (let i = 0; i < contextInput.getRowCount(); i++)
+                                                    {
+                                        				try 
+                                                        {
+                                        					let row = contextInput.getRow(i);
+                                        					contextFilters.push("contains(Context/Name, '" + row.name + "')");
+                                        				}
+                                                        catch (error)
+                                                        {
+                                        					logger.error("Error processing context row " + i + ": " + error.message);
+                                        				}
+                                        			}
+                                        			if (contextFilters.length > 0) 
+                                                    {
+                                        				filters.push("(" + contextFilters.join(' or ') + ")");
+                                        			}
+                                        		}
+                                        
+                                        		// Add number filter if provided
+                                        		if (numberInput)
+                                                {
+                                        			filters.push("contains(Number, '" + numberInput + "')");
+                                        		}
+                                        	} 
+                                            catch (error)
+                                            {
+                                        		logger.error("Error building filter string: " + error.message);
+                                        	}
+                                        
+                                        	return filters.length > 0 ? filters.join(' and ') : '';
+                                        }
+                                        
+                                        // Function to fetch and process items
+                                        function fetchAndProcessItems(fetchFunc, itemsType, partsInfoTable)
+                                        {
+                                        	try {
+                                        		let itemsList = fetchFunc();
+                                        		for (let i = 0; i < itemsList.value.length; i++) {
+                                        			try {
+                                        				let item = itemsList.value[i];
+                                        				let rowData = {
+                                        					Number: item.Number,
+                                        					Name: item.Name,
+                                        					Context: item.Context.Name,
+                                        					Version: item.Version,
+                                        					LastModified: item.LastModified,
+                                        					partsID: item.ID,
+                                        					Objects: itemsType,
+                                        				};
+                                        
+                                        				// Add TypeIcon.Path only if it exists
+                                        				if (item.TypeIcon && item.TypeIcon.Path) {
+                                                            rowData.Icon = '<img src = '+item.TypeIcon.Path.replace('/sslClientAuth', '')+'>';
+                                                        }
+                                        				else{ 
+                                                            rowData.Icon = null;
+                                                        }
+                                        
+                                        				partsInfoTable.AddRow(rowData);
+                                        			} 
+                                                    catch (error)
+                                                    {
+                                        				logger.error("Error adding " + itemsType + " row " + i + ": " + error.message);
+                                        			}
+                                        		}
+                                        	} 
+                                            catch (error) 
+                                            {
+                                        		logger.error("Error fetching " + itemsType + ": " + error.message);
+                                        	}
+                                        }
+                                        
+                                        try 
+                                        {
+                                        	// Creates filter string
+                                        	let filterString = buildFilter(contextInput, nameInput, numberInput);
+                                        
+                                        	// Set default category if not provided
+                                        	if (!categoryInput) categoryInput = 'All';
+                                        
+                                        	// Creating InfoTable with data shape
+                                        	let partsInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        		infoTableName: "InfoTable",
+                                        		dataShapeName: "ABB.AffectedItems.DS"
+                                        	});
+                                        
+                                        	// Defining fetch functions for each category
+                                        	const fetchFunctions = {
+                                        		'Parts': function() {
+                                        			try {
+                                        				return Things["ABB-windchill-OData-connector"].getAllParts({
+                                        					$select: "Name,Number,FolderLocation,Version,LastModified,TypeIcon",
+                                        					$expand: "Context",
+                                        					$filter: filterString
+                                        				});
+                                        			} catch (error) {
+                                        				logger.error("Error fetching Parts: " + error.message);
+                                        				return {
+                                        					value: []
+                                        				}; // Return an empty list to avoid crashing
+                                        			}
+                                        		},
+                                        		'CAD Documents': function() {
+                                        			try {
+                                        				return Things["ABB-windchill-OData-connector"].getAllCad({
+                                        					$select: "Name,Number,FolderLocation,Version,LastModified,TypeIcon",
+                                        					$expand: "Context",
+                                        					$filter: filterString
+                                        				});
+                                        			} catch (error) {
+                                        				logger.error("Error fetching CAD Documents: " + error.message);
+                                        				return {
+                                        					value: []
+                                        				};
+                                        			}
+                                        		},
+                                        		'Dynamic Documents': function() 
+                                                {
+                                        			try 
+                                                    {
+                                        				return Things["ABB-windchill-OData-connector"].getDynamicDocuments({
+                                        					$select: "Name,Number,FolderLocation,Version,LastModified",
+                                        					$expand: "Context",
+                                        					$filter: filterString
+                                        				});
+                                        			} 
+                                                    catch (error)
+                                                    {
+                                        				logger.error("Error fetching Dynamic Documents: " + error.message);
+                                        				return {
+                                        					value: []
+                                        				};
+                                        			}
+                                        		},
+                                        		'Documents': function()
+                                                {
+                                        			try 
+                                                    {
+                                        				return Things["ABB-windchill-OData-connector"].getDocuments({
+                                        					$select: "Name,Number,FolderLocation,Version,LastModified,TypeIcon",
+                                        					$expand: "Context",
+                                        					$filter: filterString
+                                        				});
+                                        			}
+                                                    catch (error) 
+                                                    {
+                                        				logger.error("Error fetching Documents: " + error.message);
+                                        				return {
+                                        					value: []
+                                        				};
+                                        			}
+                                        		},
+                                        		'Process Plans': function()
+                                                {
+                                        			try 
+                                                    {
+                                        				return Things["ABB-windchill-OData-connector"].getProcessPlans({
+                                        					$select: "Name,Number,FolderLocation,Version,LastModified",
+                                        					$expand: "Context",
+                                        					$filter: filterString
+                                        				});
+                                        			} 
+                                                    catch (error) 
+                                                    {
+                                        				logger.error("Error fetching Process Plans: " + error.message);
+                                        				return {
+                                        					value: []
+                                        				};
+                                        			}
+                                        		}
+                                        	};
+                                        
+                                        	// Fetching and processing items based on category
+                                        	const categories = categoryInput === 'All' ? Object.keys(fetchFunctions) : [categoryInput];
+                                        	categories.forEach(function(category) {
+                                        		try {
+                                        			fetchAndProcessItems(fetchFunctions[category], category, partsInfoTable);
+                                        		} catch (error) {
+                                        			logger.error("Error processing category " + category + ": " + error.message);
+                                        		}
+                                        	});
+                                        
+                                        	// Return the result
+                                        	result = partsInfoTable;
+                                        
+                                        } 
+                                        catch (error) 
+                                        {
+                                        	logger.error("Error in main processing block: " + error.message);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAffectedObjectListCopy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // Function to build filter string based on inputs (context, name, number)
+                                        function buildFilter(contextInput, nameInput, numberInput) {
+                                            let filters = [];
+                                        
+                                            try {
+                                                // Add name filter if provided
+                                                if (nameInput) {
+                                                    filters.push("contains(Name, '" + nameInput + "')");
+                                                }
+                                        
+                                                // Add context filters if provided
+                                                if (contextInput) {
+                                                    let contextFilters = [];
+                                                    for (let i = 0; i < contextInput.getRowCount(); i++) {
+                                                        try {
+                                                            let row = contextInput.getRow(i);
+                                                            contextFilters.push("contains(Context/Name, '" + row.name + "')");
+                                                        } catch (error) {
+                                                            logger.error("Error processing context row " + i + ": " + error.message);
+                                                        }
+                                                    }
+                                                    if (contextFilters.length > 0) {
+                                                        filters.push("(" + contextFilters.join(' or ') + ")");
+                                                    }
+                                                }
+                                        
+                                                // Add number filter if provided
+                                                if (numberInput) {
+                                                    filters.push("contains(Number, '" + numberInput + "')");
+                                                }
+                                            } catch (error) {
+                                                logger.error("Error building filter string: " + error.message);
+                                            }
+                                        
+                                            return filters.length > 0 ? filters.join(' and ') : '';
+                                        }
+                                        
+                                        // Function to fetch and process items
+                                        function fetchAndProcessItems(fetchFunc, itemsType, partsInfoTable) {
+                                            try {
+                                                let itemsList = fetchFunc();
+                                                for (let i = 0; i < itemsList.value.length; i++) {
+                                                    try {
+                                                        let item = itemsList.value[i];
+                                                        partsInfoTable.AddRow({
+                                                            Number: item.Number,
+                                                            Name: item.Name,
+                                                            Context: item.Context.Name,
+                                                            Version: item.Version,
+                                                            LastModified: item.LastModified,
+                                                            partsID: item.ID
+                                                        });
+                                                    } catch (error) {
+                                                        logger.error("Error adding " + itemsType + " row " + i + ": " + error.message);
+                                                    }
+                                                }
+                                            } catch (error) {
+                                                logger.error("Error fetching " + itemsType + ": " + error.message);
+                                            }
+                                        }
+                                        
+                                        try {
+                                            // Create filter string
+                                            let filterString = buildFilter(contextInput, nameInput, numberInput);
+                                        
+                                            // Set default category if not provided
+                                            if (!categoryInput) categoryInput = 'All';
+                                        
+                                            // Create InfoTable with data shape
+                                            let partsInfoTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                                infoTableName: "InfoTable",
+                                                dataShapeName: "ABB.AffectedItems.DS"
+                                            });
+                                        
+                                            // Defining fetch functions for each category
+                                            const fetchFunctions = {
+                                                'Parts': function() {
+                                                    try {
+                                                        return Things["ABB-windchill-OData-connector"].getAllParts({
+                                                            $select: "Name,Number,FolderLocation,Version,LastModified",
+                                                            $expand: "Context",
+                                                            $filter: filterString
+                                                        });
+                                                    } catch (error) {
+                                                        logger.error("Error fetching Parts: " + error.message);
+                                                        return { value: [] }; // Return an empty list to avoid crashing
+                                                    }
+                                                },
+                                                'CAD Documents': function() {
+                                                    try {
+                                                        return Things["ABB-windchill-OData-connector"].getAllCad({
+                                                            $select: "Name,Number,FolderLocation,Version,LastModified",
+                                                            $expand: "Context",
+                                                            $filter: filterString
+                                                        });
+                                                    } catch (error) {
+                                                        logger.error("Error fetching CAD Documents: " + error.message);
+                                                        return { value: [] };
+                                                    }
+                                                },
+                                                'Dynamic Documents': function() {
+                                                    try {
+                                                        return Things["ABB-windchill-OData-connector"].getDynamicDocuments({
+                                                            $select: "Name,Number,FolderLocation,Version,LastModified",
+                                                            $expand: "Context",
+                                                            $filter: filterString
+                                                        });
+                                                    } catch (error) {
+                                                        logger.error("Error fetching Dynamic Documents: " + error.message);
+                                                        return { value: [] };
+                                                    }
+                                                },
+                                                'Documents': function() {
+                                                    try {
+                                                        return Things["ABB-windchill-OData-connector"].getDocuments({
+                                                            $select: "Name,Number,FolderLocation,Version,LastModified",
+                                                            $expand: "Context",
+                                                            $filter: filterString
+                                                        });
+                                                    } catch (error) {
+                                                        logger.error("Error fetching Documents: " + error.message);
+                                                        return { value: [] };
+                                                    }
+                                                },
+                                                'Process Plans': function() {
+                                                    try {
+                                                        return Things["ABB-windchill-OData-connector"].getProcessPlans({
+                                                            $select: "Name,Number,FolderLocation,Version,LastModified",
+                                                            $expand: "Context",
+                                                            $filter: filterString
+                                                        });
+                                                    } catch (error) {
+                                                        logger.error("Error fetching Process Plans: " + error.message);
+                                                        return { value: [] };
+                                                    }
+                                                }
+                                            };
+                                        
+                                            // Fetching and processing items based on category
+                                            const categories = categoryInput === 'All' ? Object.keys(fetchFunctions) : [categoryInput];
+                                            categories.forEach(function(category) {
+                                                try {
+                                                    fetchAndProcessItems(fetchFunctions[category], category, partsInfoTable);
+                                                } catch (error) {
+                                                    logger.error("Error processing category " + category + ": " + error.message);
+                                                }
+                                            });
+                                        
+                                            // Return the result
+                                            result = partsInfoTable;
+                                        
+                                        } catch (error) {
+                                            logger.error("Error in main processing block: " + error.message);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getAllUsers">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let allUsers = Things["ABB-windchill-OData-connector"].getAllUsers({
+                                            $select: "Name,FullName,EMail"
+                                        });
+                                        
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.windchillUsers.DS"
+                                        });
+                                        
+                                        try
+                                        {
+                                            for(let x = 0; x < allUsers.value.length; x++)
+                                            {
+                                                result.AddRow({ 
+                                                    windchillUserName: allUsers.value[x].Name,  
+                                                    fullName: allUsers.value[x].FullName,
+                                                    email: allUsers.value[x].EMail,
+                                                    ID: allUsers.value[x].ID
+                                                });
+                                            }
+                                            
+                                        }
+                                        catch(e)
+                                        {
+                                            logger.error("ABB.Helper >>> getAllUsers >>> Error:"+e+" lineNumber:"+e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getBreadCrum_MyTasks">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.Nav.Breadcrumb.DS"
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Home", // STRING
+                                            url: "index.html#mashup=ABB.LandingPageAccessAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "My Tasks", // STRING
+                                            url: "index.html?mashup=ABB.MyTasksAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.MyTasksAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        if(Mashup == 'Not Found')
+                                        {
+                                            result.AddRow({
+                                                displayName: "No Implementation", // STRING
+                                                url: "index.html?mashup=ABB.MyTasksAppMashup", // STRING
+                                                type: "Target Mashup", // STRING
+                                                mashupName: "ABB.MyTasksAppMashup", // STRING
+                                                index: 0 // NUMBER
+                                            });
+                                        }
+                                        else
+                                        {
+                                            let workItemId = CCOJson.data[0].itemListsData[0].items[0].id.value;
+                                        
+                                            let workItemIdIcon = Things["ABB-windchill-OData-connector"].getWorkItemSubject({
+                                                WorkItemId: workItemId,
+                                                $select: "Icon"
+                                            });
+                                        
+                                            let tooltipValue = workItemIdIcon.Icon.Tooltip;
+                                        
+                                            result.AddRow({
+                                                displayName: tooltipValue, // STRING
+                                                url: "index.html?mashup=ABB.MyTasksAppMashup", // STRING
+                                                type: "Target Mashup", // STRING
+                                                mashupName: "ABB.MyTasksAppMashup", // STRING
+                                                index: 0 // NUMBER
+                                            });
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCategoryList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // CreateInfoTable
+                                        let result_Infotable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ABB.NameValue.DS"
+                                        });
+                                        
+                                        // Add All
+                                        result_Infotable.AddRow({
+                                        	name: 'All',
+                                        	value: 'N/A'
+                                        });
+                                        
+                                        // Add Parts
+                                        result_Infotable.AddRow({
+                                        	name: 'Parts',
+                                        	value: 'N/A'
+                                        });
+                                        
+                                        // Add Documents
+                                        result_Infotable.AddRow({
+                                        	name: 'Documents',
+                                        	value: 'N/A'
+                                        });
+                                        
+                                        // Add Dynamic Documents
+                                        result_Infotable.AddRow({
+                                        	name: 'Dynamic Documents',
+                                        	value: 'N/A'
+                                        });
+                                        
+                                        // Add CAD Documents
+                                        result_Infotable.AddRow({
+                                        	name: 'CAD Documents',
+                                        	value: 'N/A'
+                                        });
+                                        
+                                        // Add Process Plans
+                                        result_Infotable.AddRow({
+                                        	name: 'Process Plans',
+                                        	value: 'N/A'
+                                        });
+                                        
+                                        
+                                        result = result_Infotable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getContextName">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let sessionInputCCO = Resources["CurrentSessionInfo"].GetGlobalSessionValues().selectedID;
+                                        let partId = sessionInputCCO.data[0].itemListsData[0].items[0].id.value;
+                                        
+                                        let jsonResponse = Things["ABB-windchill-OData-connector"].Part_GET_ByID_Custom({
+                                        	$expand: "Context",
+                                        	ID: partId,
+                                        	$select: "Context"
+                                        });
+                                        
+                                        let contextName = jsonResponse.Context.Name;
+                                        
+                                        let result = Resources["InfoTableFunctions"].Query({
+                                            t: getAllContexts,
+                                            query: {
+                                                "filters": {
+                                                    "type": "EQ",
+                                                    "fieldName": "name",
+                                                    "value": contextName
+                                                }
+                                            }
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getContexts">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.NameValue.DS"
+                                        });
+                                        
+                                        let jsonResponse = Things["ABB-windchill-OData-connector"].getProductContainers();
+                                        
+                                        let formattedJSON = jsonResponse.value.map(item => ({
+                                            Name: item.Name,
+                                            ID: item.ID
+                                        }));
+                                        
+                                        for(let x = 0; x < formattedJSON.length; x++)
+                                        {
+                                            result.AddRow({name: formattedJSON[x].Name, value: formattedJSON[x].ID});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getCSRFToken">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let TokenJSON = Things["ABB-windchill-OData-connector"].getCSRFToken();
+                                        result = TokenJSON.NonceValue;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getFromPartAndAssignToSession">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let sessionInputCCO = Resources["CurrentSessionInfo"].GetGlobalSessionValues().selectedID;
+                                        
+                                        let partsID = sessionInputCCO.data[0].itemListsData[0].items[0].id.value;
+                                        
+                                        let partNumber = Things["ABB-windchill-OData-connector"].Part_GET_ByID_Custom({
+                                            ID: partsID,
+                                            $select: "Number"
+                                        });
+                                        
+                                        //Get the Affected Objects from Windchill
+                                        result = me.getAffectedObjectList({ numberInput: partNumber.Number});
+                                        
+                                        result = Resources["InfoTableFunctions"].Query({
+                                            t: result,
+                                            query:  {
+                                                "filters": {
+                                                    "type": "EQ",
+                                                    "fieldName": "partsID",
+                                                    "value": partsID
+                                                }
+                                            }
+                                        });
+                                        
+                                        //Set to the Affected Objects Session
+                                        Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue({
+                                            name: "affectedObjects" /* STRING */,
+                                            value: result
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getInstructions">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let activities = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	WorkItemId: WorkItemId,
+                                        });
+                                        result = activities.Instructions.replace(/\n/g, "<br>");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getSession_AffectedObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["CurrentSessionInfo"].GetGlobalSessionValues().affectedObjects;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getWorkItemActivities">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var workItemActivities = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	WorkItemId: WorkItemId
+                                        });
+                                        
+                                        let Activity_Infotable = Resources["InfoTableFunctions"].CreateInfoTable({
+                                        	infoTableName: undefined /* STRING {"defaultValue":"InfoTable"} */
+                                        });
+                                        
+                                        Activity_Infotable.AddField({
+                                        	name: "Name",
+                                        	baseType: 'STRING'
+                                        });
+                                        
+                                        Activity_Infotable.AddRow({
+                                        	Name: workItemActivities.Name
+                                        });
+                                        
+                                        result = Activity_Infotable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="parseSelectUser">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.NameValue.DS"
+                                        });
+                                        
+                                        try
+                                        {
+                                            if(selectedRow)
+                                            {    
+                                                result.AddRow({ name: selectedRow.fullName, value: selectedRow.windchillUserName});
+                                            }
+                                            else
+                                            {
+                                                result.AddRow({ name: "", value: ""});
+                                            }
+                                        }
+                                        catch(e)
+                                        {
+                                            result.AddRow({ name: "", value: ""});
+                                            logger.error("ABB.Helper >>> parseSelectUser >>> Error:"+e+" lineNumber:"+e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="POSTSelectedRows">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let PartsArray = [];
+                                        let JsonData;
+                                        var FinalResult = new Array();
+                                        
+                                        let json = Things["ABB-windchill-OData-connector"].getCSRFToken({});
+                                        let CSRFToken = json.NonceValue;
+                                        
+                                        //let selectedRows = Things["ABB.Helper"].getAffectedObjectList({});
+                                        //let changeRequestID = "OR:wt.change2.WTChangeRequest2:8177504";
+                                        
+                                        
+                                        let selectedRows = selectedPartItems;
+                                        
+                                        Things["ABB-windchill-OData-connector"].ChangeRequest_Reserve({
+                                        	ID: changeRequestID,
+                                        	Duration: 1
+                                        });
+                                        
+                                        var tableLength = selectedRows.getRowCount();
+                                        for (var i = 0; i < tableLength; i++) {
+                                        	try {
+                                        		var row = selectedRows.getRow(i);
+                                        		var partID = row.partsID;
+                                        		PartsArray.push(partID);
+                                        	} catch (error) {
+                                        		logger.error("Error processing row " + i + ": " + error.message);
+                                        	}
+                                        }
+                                        
+                                        for (var x = 0; x < tableLength; x++) {
+                                        	try {
+                                        		JsonData = {
+                                        			"Description": "Testing",
+                                        			"@odata.type": "#PTC.ChangeMgmt.RelevantRequestDataLinkItem",
+                                        			"Changeable@odata.bind": "Changeables(*partID*)".replace("*partID*", "'" + PartsArray[x] + "'")
+                                        		};
+                                        
+                                        		let response = Things["ABB-windchill-OData-connector"].addChangeRequest_AffectedItems({
+                                        			AffectedItem: JsonData,
+                                        			ChangeRequestId: changeRequestID,
+                                        			CSRF_NONCE: CSRFToken
+                                        		});
+                                        
+                                        		let modifiedJSON = {};
+                                        		modifiedJSON.LastModified = response.LastModified;
+                                        		modifiedJSON.ObjectType = response.ObjectType;
+                                        		modifiedJSON.PartID = PartsArray[x];
+                                        		modifiedJSON.Description = response.Description;
+                                        		modifiedJSON["@odata.context"] = response["@odata.context"];
+                                        		modifiedJSON["CreatedOn"] = response["CreatedOn"];
+                                        		modifiedJSON["ID"] = response["ID"];
+                                        //		modifiedJSON["statusCode"] = response.responseStatus["statusCode"];
+                                        		FinalResult.push(modifiedJSON);
+                                        
+                                        	} catch (error) {
+                                        		logger.error("Error processing row " + x + ": " + error.message);
+                                        	}
+                                        }
+                                        
+                                        result = FinalResult;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="problemReport_Validation">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        function validateFields(fields) {
+                                        	var requiredFields = {
+                                        		Name: fields.name,
+                                        		Container: fields.container,
+                                        //		Category: fields.category,
+                                        //		Reason: fields.reason,
+                                        //		Priority: fields.priority,
+                                        //		NeedDate: fields.needDate,
+                                        //		Description: fields.description,
+                                        //		Requester: fields.requester
+                                        	};
+                                        
+                                        	var emptyFields = [];
+                                        	if (NeedDate == '' || NeedDate == undefined) {
+                                        		emptyFields.push(
+                                        			'<li style="color: red;">' +
+                                        			'<strong> NeedDate </strong> is required.' +
+                                        			'</li>'
+                                        		);
+                                        	}
+                                            
+                                        //    else {
+                                        //		const inputDate = NeedDate;
+                                        //		const currentDate = new Date();
+                                        //        
+                                        //		logger.warn("inputDate :: "+inputDate);
+                                        //        logger.warn("currentDate :: "+currentDate);
+                                        //		// Set the time portion of the current date to zero to only compare the date
+                                        //		//        currentDate.setHours(0, 0, 0, 0);
+                                        //
+                                        //		// Check if inputDate is valid and if it's less than currentDate
+                                        //		if (dateFormat(inputDate, "dd-MM-yyyy") != dateFormat(currentDate, "dd-MM-yyyy")) {
+                                        //			emptyFields.push(
+                                        //				'<li style="color: red;">' +
+                                        //				'<strong> NeedDate </strong> cannot be in the past.' +
+                                        //				'</li>'
+                                        //			);
+                                        //		}
+                                        //	}
+                                        
+                                        	for (var field in requiredFields) {
+                                        		if (requiredFields.hasOwnProperty(field)) {
+                                        			if (!requiredFields[field] || requiredFields[field].trim() === '') {
+                                        				emptyFields.push(
+                                        					'<li style="color: red;">' +
+                                        					'<strong>' + field + '</strong> is required.' +
+                                        					'</li>'
+                                        				);
+                                        			}
+                                        		}
+                                        	}
+                                        
+                                        	if (emptyFields.length > 0) {
+                                        		return '<ul style="padding-left: 20px; margin: 15px;">' +
+                                        			emptyFields.join('') + // Join the list items without additional spaces
+                                        			'</ul>';
+                                        	}
+                                        
+                                        	return 'Success';
+                                        }
+                                        
+                                        var fieldValues = {
+                                        	name: Name,
+                                        	container: Container,
+                                        //	category: Category,
+                                        //	reason: Reason,
+                                        //	priority: Priority,
+                                        //	needDate: dateFormat(new Date(NeedDate), "dd-MM-yyyy hh:mm:ss"),
+                                        //	description: Description,
+                                        //	requester: Requester
+                                        };
+                                        
+                                        var validationMessage = validateFields(fieldValues);
+                                        result = validationMessage;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="removeAffectedObjectsFromSession">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let affectedObjects = Resources["CurrentSessionInfo"].GetGlobalSessionValues().affectedObjects;
+                                        
+                                        if(selectedRows.length)
+                                        {
+                                            for(let x = 0; x < selectedRows.length; x++)
+                                            {
+                                                let index = affectedObjects.findIndex(selectedRows.rows[x]);
+                                                affectedObjects.RemoveRow(index);
+                                            }
+                                        }
+                                        
+                                        Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue({
+                                        	name: "affectedObjects",
+                                        	value: affectedObjects
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="replaceBreadCrumData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = breadCrumData;
+                                        result.rows[0].mashupName = "ABB."+(result.rows[0].mashupName);
+                                        result.rows[0].url = (result.rows[0].url).replace("LandingPageAccessAppMashup","ABB.LandingPageAccessAppMashup");
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="RoutingMashup">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var TargetMashup;
+                                        
+                                        
+                                        let activities = Things["ABB-windchill-OData-connector"].getWorkItem_Activities({
+                                        	$expand: undefined /* STRING {"dataShape":""} */,
+                                        	WorkItemId: WorkItemId /* STRING [Required] {"dataShape":""} */,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        
+                                        
+                                        //var requestId = TaskType;
+                                        //if (requestId.includes("WTChangeRequest")) {
+                                        //	TargetMashup = "ABB.CRDetailedReview.MU";
+                                        //} else if (requestId.includes("WTChangeIssue")) {
+                                        //	TargetMashup = "ABB.PRDetailedReview.MU";
+                                        //} else {
+                                        //	TargetMashup = "ABB.NotFound.MU";
+                                        //}
+                                        
+                                        let name = activities.Name;
+                                        if (name == "Analyze Change Request") {
+                                        	TargetMashup = "ABB.CRDetailedReview.MU";
+                                        } else if (name == "Clarify Change Request") {
+                                        	TargetMashup = "ABB.CRDetailedReview.MU";
+                                        } else if (name == "Analyze Problem Report") {
+                                        	TargetMashup = "ABB.PRDetailedReview.MU";
+                                        } else if (name == "Clarify") {
+                                        	TargetMashup = "ABB.PRDetailedReview.MU";
+                                        } else {
+                                        	TargetMashup = "ABB.NotFound.MU";
+                                        }
+                                        
+                                        result = TargetMashup;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="rowEnabler">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = false;
+                                        
+                                        try
+                                        {
+                                            if(selectedRows) result = false;
+                                            else result = true;
+                                        }
+                                        catch(e)
+                                        {
+                                            result = false;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="selectedAffectedObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.selectedAffectedObjects.DS"
+                                        });
+                                        
+                                        let selectedRows = Resources["CurrentSessionInfo"].GetGlobalSessionValues().affectedObjects;
+                                        
+                                        try
+                                        {
+                                            if(selectedRows.length > 0)
+                                            {
+                                                result.AddRow({ visibility: true, message: "Attached ("+selectedRows.length+") Affected Objects"});
+                                            }
+                                            else
+                                            {
+                                                result.AddRow({ visibility: false, message: ""});
+                                            }
+                                        }
+                                        catch(e)
+                                        {
+                                            result.AddRow({ visibility: false, message: ""});
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="selectedRowsInfoTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = selectedRows;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="setToSession_AffectedObjects">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let SelectedAffectedObjects = Resources["CurrentSessionInfo"].GetGlobalSessionValues().affectedObjects;
+                                        
+                                        if(selectedRows.length && SelectedAffectedObjects.length)
+                                        {
+                                            for(let x = 0; x < selectedRows.length; x++)
+                                            {
+                                                let newEntry = {
+                                                    Number: selectedRows.rows[x].Number,
+                                                    Name: selectedRows.rows[x].Name,
+                                                    Context: selectedRows.rows[x].Context,
+                                                    Version: selectedRows.rows[x].Version,
+                                                    LastModified: selectedRows.rows[x].LastModified,
+                                                    partsID: selectedRows.rows[x].partsID,
+                                                    Objects: selectedRows.rows[x].Objects,
+                                                    Icon: selectedRows.rows[x].Icon
+                                                };
+                                                SelectedAffectedObjects.AddRow(newEntry);
+                                            }
+                                            
+                                            //Make the Distinct Objects
+                                            SelectedAffectedObjects = Resources["InfoTableFunctions"].Distinct({
+                                                t: SelectedAffectedObjects,
+                                                columns: "Number,Name,Context,Version,LastModified,partsID,Objects,Icon"
+                                            });
+                                        
+                                            // Set Values to Session
+                                            Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue({
+                                                name: "affectedObjects" /* STRING */,
+                                                value: SelectedAffectedObjects
+                                            });
+                                        }
+                                        else
+                                        {
+                                            // Set Values to Session
+                                            Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue({
+                                                name: "affectedObjects" /* STRING */,
+                                                value: selectedRows
+                                            });
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="test">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let sessionInputCCO = Resources["CurrentSessionInfo"].GetGlobalSessionValues().selectedID;
+                                        
+                                        let partsID = sessionInputCCO.data[0].itemListsData[0].items[0].id.value;
+                                        
+                                        let partNumber = Things["ABB-windchill-OData-connector"].Part_GET_ByID_Custom({
+                                            ID: partsID,
+                                            $select: "Number"
+                                        });
+                                        
+                                        //Get the Affected Objects from Windchill
+                                        result = me.getAffectedObjectList({ numberInput: partNumber.Number});
+                                        
+                                        result = Resources["InfoTableFunctions"].Query({
+                                            t: result,
+                                            query:  {
+                                                "filters": {
+                                                    "type": "EQ",
+                                                    "fieldName": "partsID",
+                                                    "value": partsID
+                                                }
+                                            }
+                                        });
+                                        
+                                        //Set to the Affected Objects Session
+                                        Resources["CurrentSessionInfo"].SetGlobalSessionInfoTableValue({
+                                            name: "affectedObjects" /* STRING */,
+                                            value: result
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="UpdateWorkItem">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        var CSRF_Token = Things["ABB-windchill-OData-connector"].getCSRFToken({
+                                        	additionalQuery: undefined /* STRING {"dataShape":""} */,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        
+                                        var WorkItemData;
+                                        
+                                        var CSRF_NONCE = CSRF_Token.NonceValue;
+                                        
+                                        var EventList = [];
+                                        if (UserEventList !== "" && UserEventList !== undefined) {
+                                        	EventList[0] = UserEventList;
+                                        } else {
+                                        	EventList = [];
+                                        }
+                                        
+                                        if(objectType == "Clarify" || objectType == "Clarify Change Request")
+                                        {
+                                            WorkItemData = {
+                                                "Variables": [
+                                                    {
+                                                       
+                                                    }],
+                                                "WorkitemComment": Comment,
+                                                "UserEventList": EventList,
+                                                "AutomateFastTrack": true,
+                                                "VoteAction": ""
+                                            };
+                                        }
+                                        else
+                                        {
+                                             WorkItemData = {
+                                                "Variables": [
+                                                    {
+                                                        "Name": "special_instructions",
+                                                        "Value": special_instructions
+                                                    }],
+                                                "WorkitemComment": Comment,
+                                                "UserEventList": EventList,
+                                                "AutomateFastTrack": true,
+                                                "VoteAction": ""
+                                            };
+                                        }
+                                        
+                                              
+                                        var updateWorkItem = Things["ABB-windchill-OData-connector"].UpdateWorkItem({
+                                        	WorkItemCompleteInfo: WorkItemData /* JSON {"dataShape":""} */,
+                                        	$expand: undefined /* STRING {"dataShape":""} */,
+                                        	WorkItemId: WorkItemId /* STRING [Required] {"dataShape":""} */,
+                                        	CSRF_NONCE: CSRF_NONCE /* STRING [Required] {"dataShape":""} */,
+                                        	$select: undefined /* STRING {"dataShape":""} */
+                                        });
+                                        
+                                        result = updateWorkItem;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="CAD_DocumentsIcon"></AlertDefinitions>
+                <AlertDefinitions
+                 name="DocumentsIcon"></AlertDefinitions>
+                <AlertDefinitions
+                 name="PartsIcon"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

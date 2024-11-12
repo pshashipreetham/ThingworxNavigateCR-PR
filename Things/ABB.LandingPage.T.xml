@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Things>
+        <Thing
+         description=""
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="ABB.LandingPage.T"
+         projectName="ABBProject"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="customCollectApps">
+                        <ResultType
+                         aspect.dataShape="ABB.NavigateApps.CollectionDataShape.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.NavigateApps.CollectionDataShape.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="customCollectApps"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="customCollectApps">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        //Get Main Custom Collection Apps
+                                        customCollectApps = Things["AppCollectionsConsolidator"].CollectApps();
+                                        
+                                        //Change the data for the Change Management Tasks Collection
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.NavigateApps.CollectionDataShape.DS"
+                                        });
+                                        
+                                        //
+                                        for(let x = 0; x < customCollectApps.length; x++)
+                                        {
+                                            let newEntry = {
+                                                collectionName: customCollectApps.rows[x].collectionName,
+                                                tailoringUrl: customCollectApps.rows[x].tailoringUrl, 
+                                                tailoringMashup: customCollectApps.rows[x].tailoringMashup, 
+                                                appCollection: customCollectApps.rows[x].appCollection, 
+                                                rank: customCollectApps.rows[x].rank
+                                            };
+                                            
+                                            result.AddRow(newEntry);
+                                        }
+                                        
+                                        let changeManagmentTiles = result.rows[2].appCollection;
+                                        let partTiles = result.rows[0].appCollection;
+                                        
+                                        
+                                        for(let x = 0; x < changeManagmentTiles.length; x++)
+                                        {
+                                            logger.warn(changeManagmentTiles.rows[x].displayname);
+                                            if(changeManagmentTiles.rows[x].displayname == "MoGe Problem Report")
+                                            {
+                                                changeManagmentTiles.rows[x].url = "index.html?mashup=ABB.Nav.CreateProblemReportAppMashup";
+                                            }
+                                            else if(changeManagmentTiles.rows[x].displayname == "My ABB Tasks")
+                                            {
+                                                changeManagmentTiles.rows[x].url = "index.html?mashup=ABB.MyTasksAppMashup";
+                                            }
+                                            else if(changeManagmentTiles.rows[x].displayname == "MoGe Request a Change")
+                                            {
+                                                changeManagmentTiles.rows[x].url = "index.html?mashup=ABB.Nav.ChangeRequestMashup";
+                                            }
+                                            else if(changeManagmentTiles.rows[x].displayname == "MoGe Request a Change")
+                                            {
+                                                changeManagmentTiles.rows[x].url = "index.html?mashup=ABB.Nav.ChangeRequestMashup";
+                                            }
+                                            else if(changeManagmentTiles.rows[x].displayname == "My Tasks")
+                                            {
+                                                changeManagmentTiles.RemoveRow(x);
+                                                x = x-1;
+                                            }
+                                            else if(changeManagmentTiles.rows[x].displayname == "Report a Problem")
+                                            {
+                                                changeManagmentTiles.RemoveRow(x);
+                                            }
+                                        }
+                                        
+                                        for(let x = 0; x < partTiles.length; x++)
+                                        {
+                                            if(partTiles.rows[x].displayname == "View Part Properties" || partTiles.rows[x].displayname == "View Parts List" || partTiles.rows[x].displayname == "View Design Files")
+                                            {
+                                                partTiles.rows[x].url = (partTiles.rows[x].url).replace("CommonSearchAccessAppMashup","ABB.CommonSearchAccessAppMashup");
+                                            }
+                                        }
+                                        
+                                        result.rows[2].appCollection = partTiles;
+                                        result.rows[2].appCollection = changeManagmentTiles;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

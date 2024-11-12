@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="6"
+ universal="password">
+    <Things>
+        <Thing
+         description="Thing is for the MoGe Problem Report"
+         documentationContent=""
+         effectiveThingPackage="PTC.Converge.App.CustomizedAccessAppConfigPackage"
+         enabled="true"
+         homeMashup="ABB.Nav.CreateProblemReportAppMashup"
+         identifier=""
+         inheritedValueStream=""
+         name="ABB.Nav.CreateProblemReportAppThing"
+         projectName="ABBProject"
+         published="false"
+         tags="PTC:PTC.AccessApp.ContributeApps"
+         thingTemplate="PTC.Converge.App.CustomizedAccessAppConfigTemplate"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="*">
+                    <PropertyRead>
+                        <Principal
+                         isPermitted="true"
+                         name="Manufacturing"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Purchasing"
+                         type="Group"></Principal>
+                    </PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="Manufacturing"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="Purchasing"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="NavigateOrganization"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Access App Configuration"
+                 isMultiRow="false"
+                 name="Access App Configuration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="PTC.AccessApp.RoleConfigDataShape"
+                             baseType="INFOTABLE"
+                             description="Access App Role Based Configuration"
+                             name="RoleBasedAccessAppConfig"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <RoleBasedAccessAppConfig>
+                                <infoTable>
+                                    <DataShape>
+                                        <FieldDefinitions></FieldDefinitions>
+                                    </DataShape>
+                                    <Rows></Rows>
+                                </infoTable>
+                            </RoleBasedAccessAppConfig>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="ABB.InternalNames.DS"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="categories"
+                     ordinal="4"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.isPersistent="true"
+                     baseType="STRING"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="changeIssueId"
+                     ordinal="6"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="ABB.InternalNames.DS"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="priorities"
+                     ordinal="3"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.dataShape="ABB.Nav.ReasonForChangeDataShape"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="reasonForAChange"
+                     ordinal="2"></PropertyDefinition>
+                    <PropertyDefinition
+                     aspect.dataChangeType="VALUE"
+                     aspect.isIndexed="false"
+                     aspect.isPersistent="true"
+                     baseType="INFOTABLE"
+                     category=""
+                     description=""
+                     isLocalOnly="false"
+                     name="selectedRows"
+                     ordinal="5"></PropertyDefinition>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="addAffectedItems">
+                        <ResultType
+                         baseType="JSON"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="changeIssueId"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.AffectedItems.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="selectedRows"
+                             ordinal="2"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="closeLoader">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="createProblemReport">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="category"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Description"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="issuePriority"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="name"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="needsDate"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="productContainerID"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="reasonForChange"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Requester"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="ABB.AffectedItems.DS"
+                             baseType="INFOTABLE"
+                             description=""
+                             name="SelectedRows"
+                             ordinal="10"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="username"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="createProblemReport_copy">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="category"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Description"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="issuePriority"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="name"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="DATETIME"
+                             description=""
+                             name="needsDate"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="productContainerID"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="reasonForChange"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="Requester"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
+                             name="username"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getBreadCrumData">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.Breadcrumb.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getBreadCrumDataAbbTasks">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.Breadcrumb.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetCategoryList">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.ListDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getReasonForChange">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.ReasonForChangeDataShape"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getRequestPriorities">
+                        <ResultType
+                         aspect.dataShape="ABB.InternalNames.DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetSelectedContexts">
+                        <ResultType
+                         aspect.dataShape="ABB.Nav.SelectedContexts"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="openLoader">
+                        <ResultType
+                         baseType="BOOLEAN"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="addAffectedItems">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = {};
+                                        try
+                                        {
+                                            let reserveReport = Things["ABB-windchill-OData-connector"].ProblemReportReserve({ ID: changeIssueId});
+                                        	let rowCount = selectedRows.length;
+                                        
+                                        	for (i = 0; i < rowCount; i++) 
+                                            {
+                                        		let partId = selectedRows[i].partsID;
+                                        		let changeablesString = "Changeables('" + partId + "')";
+                                        		let jsonData = {
+                                        			"Description": "Testing",
+                                        			"ApprovedQuantity": 10,
+                                        			"Changeable@odata.bind": changeablesString
+                                        		};
+                                        		
+                                               result =  Things["ABB-windchill-OData-connector"].addProblemReport_AffectedItems({
+                                        			AffectedItem: jsonData,
+                                        			ID: changeIssueId
+                                        		});
+                                        	}
+                                        }
+                                        catch (e) 
+                                        {
+                                        	logger.error("ThingName :: " + me.name + " || serviceName :: addAffectedItems || errorMessage :: " + e + " || at lineNumber :: " + e.lineNumber);
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="closeLoader">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = false;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="createProblemReport">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = false;
+                                        
+                                        let SelectedRows = Resources["CurrentSessionInfo"].GetGlobalSessionValues().affectedObjects;
+                                        
+                                        let jsonData = {"Name": name };
+                                        
+                                        if(category)
+                                        {
+                                            jsonData.Category = 
+                                                {
+                                                "Value": category
+                                            };
+                                        }
+                                        
+                                        if(Description)  jsonData.Description = Description;
+                                        
+                                        if(reasonForChange)
+                                        {
+                                            jsonData.ABBReasonForChange = 
+                                                {
+                                                "Value": reasonForChange
+                                            };
+                                        }
+                                        
+                                        if(Requester) jsonData.Requester = Requester;
+                                        
+                                        if(issuePriority) 
+                                        {
+                                            jsonData.IssuePriority = { "Value": issuePriority };
+                                        }
+                                        
+                                        try
+                                        {
+                                            jsonData.State =  { "Value": "" };
+                                            jsonData.TypeIcon = {"Path": "" };
+                                            jsonData.NeedDate = formatToISO(needsDate);
+                                            jsonData["@odata.type"] = "#PTC.ChangeMgmt.MGProblemReport";
+                                            jsonData["Context@odata.bind"] = "Containers('"+productContainerID+"')";
+                                        
+                                            let jsonResponse = Things["ABB-windchill-OData-connector"].createProblemReport({ ProblemReport: jsonData});
+                                        
+                                            let reserveReport = Things["ABB-windchill-OData-connector"].ProblemReportReserve({ ID: jsonResponse.VersionID});
+                                        
+                                            if (SelectedRows) 
+                                            {
+                                                try 
+                                                {
+                                                    if(SelectedRows.length)
+                                                    {
+                                                        me.addAffectedItems({ changeIssueId: jsonResponse.ID,  selectedRows: SelectedRows});
+                                                    }
+                                                } 
+                                                catch (e) 
+                                                {
+                                                    result = false;
+                                                    logger.error("Error: Selected Rows" + e + " lineNumber:" + e.lineNumber);
+                                                }
+                                            }
+                                        
+                                            let submitReport = Things["ABB-windchill-OData-connector"].ProblemReport_Submit_Custom({ID: jsonResponse.ID});
+                                        
+                                            result = true;
+                                        }
+                                        catch(e)
+                                        {
+                                            result = false;
+                                            logger.error("ABB.Nav.CreateProblemReportAppThing >>> createProblemReport >>> Error:"+e+" lineNumber:"+e.lineNumber);
+                                        }
+                                        
+                                        //Function to get the Fomatted date for the Windchill
+                                        function formatToISO(date) 
+                                        {
+                                            let year = date.getUTCFullYear();
+                                            let month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
+                                            let day = date.getUTCDate().toString().padStart(2, '0');
+                                        
+                                            let hours = date.getUTCHours().toString().padStart(2, '0');
+                                            let minutes = date.getUTCMinutes().toString().padStart(2, '0');
+                                            let seconds = date.getUTCSeconds().toString().padStart(2, '0');
+                                            let milliseconds = date.getUTCMilliseconds().toString().padStart(3, '0');
+                                        
+                                            let formattedDate = year + "-" + month + "-" + day + "T" + hours + ":" + minutes + ":" + seconds + "." + milliseconds + "Z";
+                                        
+                                            return formattedDate;
+                                        }
+                                        
+                                        function setStatus(stringValue)
+                                        {
+                                            Resources["CurrentSessionInfo"].SetGlobalSessionStringValue({
+                                                name: "creationStatus" /* STRING */,
+                                                value: stringValue /* STRING */
+                                            });
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="createProblemReport_copy">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = false;
+                                        
+                                        try
+                                        {
+                                            let jsonData = 
+                                                {
+                                                    "Name": name,
+                                                    "IssuePriority": 
+                                                    {
+                                                        "Value": issuePriority
+                                                    },
+                                                    "Category": 
+                                                    {
+                                                        "Value": category
+                                                    },
+                                                    "Requester": Requester,
+                                                    "State": 
+                                                    {
+                                                        "Value": ""
+                                                    },
+                                                    "TypeIcon":
+                                                    {
+                                                        "Path": ""
+                                                    },
+                                                    "Description": Description,
+                                                    "NeedDate": formatToISO(needsDate),
+                                                    "@odata.type": "#PTC.ChangeMgmt.MGProblemReport",
+                                                    "Context@odata.bind": "Containers('"+productContainerID+"')",
+                                                    "ABBReasonForChange": 
+                                                    {
+                                                        "Value": reasonForChange
+                                                    }
+                                                };
+                                        
+                                            let jsonResponse = Things["ABB-windchill-OData-connector"].createProblemReport({ ProblemReport: jsonData});
+                                            
+                                            let reserveReport = Things["ABB-windchill-OData-connector"].ProblemReport_Reserve_Custom({ ID: jsonResponse.VersionID});
+                                            
+                                            let submitReport = Things["ABB-windchill-OData-connector"].ProblemReport_Submit_Custom({ID: jsonResponse.ID});
+                                            
+                                            
+                                            result = true;
+                                        }
+                                        catch(e)
+                                        {
+                                            result = false;
+                                            logger.error("ABB.Nav.CreateProblemReportAppThing >>> createProblemReport >>> Error:"+e+" lineNumber:"+e.lineNumber);
+                                        }
+                                        
+                                        //Function to get the Fomatted date for the Windchill
+                                        function formatToISO(date) 
+                                        {
+                                            let year = date.getUTCFullYear();
+                                            let month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
+                                            let day = date.getUTCDate().toString().padStart(2, '0');
+                                        
+                                            let hours = date.getUTCHours().toString().padStart(2, '0');
+                                            let minutes = date.getUTCMinutes().toString().padStart(2, '0');
+                                            let seconds = date.getUTCSeconds().toString().padStart(2, '0');
+                                            let milliseconds = date.getUTCMilliseconds().toString().padStart(3, '0');
+                                        
+                                            let formattedDate = year + "-" + month + "-" + day + "T" + hours + ":" + minutes + ":" + seconds + "." + milliseconds + "Z";
+                                        
+                                            return formattedDate;
+                                        }
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getBreadCrumData">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.Nav.Breadcrumb.DS"
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Home", // STRING
+                                            url: "index.html#mashup=ABB.LandingPageAccessAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "MoGe Problem Report", // STRING
+                                            url: "index.html#mashup=ABB.Nav.CreateProblemReportAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.Nav.CreateProblemReportAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getBreadCrumDataAbbTasks">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                            infoTableName: "InfoTable",
+                                            dataShapeName: "ABB.Nav.Breadcrumb.DS"
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "Home", // STRING
+                                            url: "index.html#mashup=ABB.LandingPageAccessAppMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        
+                                        result.AddRow({
+                                            displayName: "My ABB Tasks", // STRING
+                                            url: "index.html#mashup=ABB.Nav.RequestAChangeInnerMashup", // STRING
+                                            type: "Target Mashup", // STRING
+                                            mashupName: "ABB.LandingPageAccessAppMashup", // STRING
+                                            index: 0 // NUMBER
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetCategoryList">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ABB.Nav.ListDataShape"
+                                        });
+                                        
+                                        // add data row
+                                        result.AddRow({
+                                        	key: "DOCUMENTATION_ISSUE",
+                                        	value: "Documentation Issue"
+                                        });
+                                        result.AddRow({
+                                        	key: "OTHER",
+                                        	value: "Other"
+                                        });
+                                        result.AddRow({
+                                        	key: "COST_REDUCTION",
+                                        	value: "Cost Reduction"
+                                        });
+                                        result.AddRow({
+                                        	key: "SAFETY_ISSUE",
+                                        	value: "Safety Issue"
+                                        });
+                                        result.AddRow({
+                                        	key: "SCHEDULEDRIVEN",
+                                        	value: "Schedule Driven"
+                                        });
+                                        result.AddRow({
+                                        	key: "QUALITY_IMPROVEMENT",
+                                        	value: "Quality Improvement"
+                                        });
+                                        result.AddRow({
+                                        	key: "PARTAVAILABILITY",
+                                        	value: "Part Availability"
+                                        });
+                                        result.AddRow({
+                                        	key: "INCORPORATIONERROR",
+                                        	value: "Incorporation Error"
+                                        });
+                                        
+                                        result.AddRow({
+                                        	key: "MISSINGINFORMATION",
+                                        	value: "Missing Information"
+                                        });
+                                        result.AddRow({
+                                        	key: "NEWWORK",
+                                        	value: "New Work"
+                                        });
+                                        result.AddRow({
+                                        	key: "MANUFACTURABILITY",
+                                        	value: "Manufacturability"
+                                        });
+                                        result.AddRow({
+                                        	key: "DESIGN_ISSUE",
+                                        	value: "Design Issue"
+                                        });
+                                        result.AddRow({
+                                        	key: "PRODUCT_IMPROVEMENT",
+                                        	value: "Product Improvement"
+                                        });
+                                        result.AddRow({
+                                        	key: "CUSTOMERDRIVEN",
+                                        	value: "Customer Driven"
+                                        });
+                                        result.AddRow({
+                                        	key: "INITIAL_RELEASE",
+                                        	value: "Initial Release"
+                                        });
+                                        result.AddRow({
+                                        	key: "VENDORDRIVEN",
+                                        	value: "Vendor Driven"
+                                        });
+                                        
+                                        result = Resources["InfoTableFunctions"].Sort({
+                                        	sortColumn: "key",
+                                        	t: result,
+                                        	ascending: true
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getReasonForChange">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = me.reasonForAChange;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getRequestPriorities">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = me.priorities;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GetSelectedContexts">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "ABB.Nav.SelectedContexts"
+                                        });
+                                        
+                                        // add data row
+                                        result.AddRow({
+                                        	value: "Positioning Truck",
+                                        	key: "OR:wt.pdmlink.PDMLinkProduct:4691755"
+                                        });
+                                        result.AddRow({
+                                        	value: "Snowmobile",
+                                        	key: "OR:wt.pdmlink.PDMLinkProduct:194004"
+                                        });
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="openLoader">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        result = true;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations>
+                <AlertDefinitions
+                 name="categories"></AlertDefinitions>
+                <AlertDefinitions
+                 name="changeIssueId"></AlertDefinitions>
+                <AlertDefinitions
+                 name="priorities"></AlertDefinitions>
+                <AlertDefinitions
+                 name="reasonForAChange"></AlertDefinitions>
+                <AlertDefinitions
+                 name="selectedRows"></AlertDefinitions>
+            </AlertConfigurations>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="PTC.CustomAccessAppThingShape"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <ThingProperties>
+                <appIcon>
+                    <Value>
+                    <![CDATA[
+                    PTC.AccessApp.CustomAppIcon
+                    ]]>
+                    </Value>
+                    <Timestamp>1970-01-01T00:00:00.000Z</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </appIcon>
+                <tailoringMashupName>
+                    <Value></Value>
+                    <Timestamp>2024-08-26T10:37:00.927Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </tailoringMashupName>
+                <useCaseNameToken>
+                    <Value>
+                    <![CDATA[
+                    MoGe Problem Report
+                    ]]>
+                    </Value>
+                    <Timestamp>2024-08-29T08:04:08.098Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </useCaseNameToken>
+                <additionalMashup>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     baseType="STRING"
+                                     description="Mashup description"
+                                     name="description"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="true"
+                                     baseType="MASHUPNAME"
+                                     description="Mashup name"
+                                     name="name"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows></Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2024-08-26T10:55:21.407Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </additionalMashup>
+                <useCaseTabToken>
+                    <Value></Value>
+                    <Timestamp>2024-09-03T06:48:06.732Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </useCaseTabToken>
+                <isTabReloadRequired>
+                    <Value>false</Value>
+                    <Timestamp>2024-08-26T10:16:31.205Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </isTabReloadRequired>
+                <isAppValidationRequired>
+                    <Value>true</Value>
+                    <Timestamp>2024-08-23T08:43:49.950Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </isAppValidationRequired>
+                <priorities>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="displayName"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="internalName"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Emergency
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    EMERGENCY
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    High
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    HIGH
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Low
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    LOW
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Medium
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    MEDIUM
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2024-09-06T14:02:53.915Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </priorities>
+                <reasonForAChange>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="InternalName"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Name"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    3rdpartyrequirement
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    3rd party requirement
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    Availability
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Availability
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    ConfigurationDesignFault
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Configuration/DesignFault
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    Cost
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Cost
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    CustomerExperience
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Customer Experience
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    Manufacturability
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Manufacturability
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    OtherReason
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Other Reason
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    QualityReliability
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Quality Reliability
+                                    ]]>
+                                    </Name>
+                                </Row>
+                                <Row>
+                                    <InternalName>
+                                    <![CDATA[
+                                    Safety
+                                    ]]>
+                                    </InternalName>
+                                    <Name>
+                                    <![CDATA[
+                                    Safety
+                                    ]]>
+                                    </Name>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2024-08-29T08:20:00.959Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </reasonForAChange>
+                <selectedRows>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Context"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="DATETIME"
+                                     description=""
+                                     name="LastModified"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Name"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Number"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="partsID"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="Version"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <Context>
+                                    <![CDATA[
+                                    Snowmobile
+                                    ]]>
+                                    </Context>
+                                    <LastModified>2018-11-27T17:58:13.000Z</LastModified>
+                                    <Name>
+                                    <![CDATA[
+                                    DECAL-PASS SEAT WARNING
+                                    ]]>
+                                    </Name>
+                                    <Number>
+                                    <![CDATA[
+                                    7189832
+                                    ]]>
+                                    </Number>
+                                    <Version>
+                                    <![CDATA[
+                                    1.1 (Design)
+                                    ]]>
+                                    </Version>
+                                    <partsID>
+                                    <![CDATA[
+                                    OR:wt.part.WTPart:687084
+                                    ]]>
+                                    </partsID>
+                                </Row>
+                                <Row>
+                                    <Context>
+                                    <![CDATA[
+                                    Snowmobile
+                                    ]]>
+                                    </Context>
+                                    <LastModified>2018-11-27T17:58:13.000Z</LastModified>
+                                    <Name>
+                                    <![CDATA[
+                                    ASM-TUNNEL LATCH PLATE
+                                    ]]>
+                                    </Name>
+                                    <Number>
+                                    <![CDATA[
+                                    1024201
+                                    ]]>
+                                    </Number>
+                                    <Version>
+                                    <![CDATA[
+                                    1.1 (Design)
+                                    ]]>
+                                    </Version>
+                                    <partsID>
+                                    <![CDATA[
+                                    OR:wt.part.WTPart:687085
+                                    ]]>
+                                    </partsID>
+                                </Row>
+                                <Row>
+                                    <Context>
+                                    <![CDATA[
+                                    Snowmobile
+                                    ]]>
+                                    </Context>
+                                    <LastModified>2018-11-27T17:58:13.000Z</LastModified>
+                                    <Name>
+                                    <![CDATA[
+                                    PLATE-BUN SUPPORT
+                                    ]]>
+                                    </Name>
+                                    <Number>
+                                    <![CDATA[
+                                    5266240
+                                    ]]>
+                                    </Number>
+                                    <Version>
+                                    <![CDATA[
+                                    1.1 (Design)
+                                    ]]>
+                                    </Version>
+                                    <partsID>
+                                    <![CDATA[
+                                    OR:wt.part.WTPart:687086
+                                    ]]>
+                                    </partsID>
+                                </Row>
+                                <Row>
+                                    <Context>
+                                    <![CDATA[
+                                    Snowmobile
+                                    ]]>
+                                    </Context>
+                                    <LastModified>2018-11-27T17:58:13.000Z</LastModified>
+                                    <Name>
+                                    <![CDATA[
+                                    SCR-HXFL-M6X1.0X35 8
+                                    ]]>
+                                    </Name>
+                                    <Number>
+                                    <![CDATA[
+                                    7518578
+                                    ]]>
+                                    </Number>
+                                    <Version>
+                                    <![CDATA[
+                                    1.1 (Design)
+                                    ]]>
+                                    </Version>
+                                    <partsID>
+                                    <![CDATA[
+                                    OR:wt.part.WTPart:687087
+                                    ]]>
+                                    </partsID>
+                                </Row>
+                                <Row>
+                                    <Context>
+                                    <![CDATA[
+                                    Snowmobile
+                                    ]]>
+                                    </Context>
+                                    <LastModified>2018-11-27T17:58:13.000Z</LastModified>
+                                    <Name>
+                                    <![CDATA[
+                                    WELD-TUNNEL LATCH PLATE
+                                    ]]>
+                                    </Name>
+                                    <Number>
+                                    <![CDATA[
+                                    1024202
+                                    ]]>
+                                    </Number>
+                                    <Version>
+                                    <![CDATA[
+                                    1.1 (Design)
+                                    ]]>
+                                    </Version>
+                                    <partsID>
+                                    <![CDATA[
+                                    OR:wt.part.WTPart:687088
+                                    ]]>
+                                    </partsID>
+                                </Row>
+                                <Row>
+                                    <Context>
+                                    <![CDATA[
+                                    Snowmobile
+                                    ]]>
+                                    </Context>
+                                    <LastModified>2018-11-27T17:58:13.000Z</LastModified>
+                                    <Name>
+                                    <![CDATA[
+                                    BRKT-COVER MOUNT RH FRONT
+                                    ]]>
+                                    </Name>
+                                    <Number>
+                                    <![CDATA[
+                                    5266373
+                                    ]]>
+                                    </Number>
+                                    <Version>
+                                    <![CDATA[
+                                    1.1 (Design)
+                                    ]]>
+                                    </Version>
+                                    <partsID>
+                                    <![CDATA[
+                                    OR:wt.part.WTPart:687089
+                                    ]]>
+                                    </partsID>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2024-10-15T18:45:33.951Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </selectedRows>
+                <categories>
+                    <Value>
+                        <infoTable>
+                            <DataShape>
+                                <FieldDefinitions>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="displayName"
+                                     ordinal="0"></FieldDefinition>
+                                    <FieldDefinition
+                                     aspect.isPrimaryKey="false"
+                                     baseType="STRING"
+                                     description=""
+                                     name="internalName"
+                                     ordinal="0"></FieldDefinition>
+                                </FieldDefinitions>
+                            </DataShape>
+                            <Rows>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Documentation Issue
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    DOCUMENTATION_ISSUE
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Other
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    OTHER
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Cost Reduction
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    COST_REDUCTION
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Safety Issue
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    SAFETY_ISSUE
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Schedule Driven
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    SCHEDULEDRIVEN
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Quality Improvement
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    QUALITY_IMPROVEMENT
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Part Availability
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    PARTAVAILABILITY
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Incorporation Error
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    INCORPORATIONERROR
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Missing Information
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    MISSINGINFORMATION
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    New Work
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    NEWWORK
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Manufacturability
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    MANUFACTURABILITY
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Design Issue
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    DESIGN_ISSUE
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Product Improvement
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    PRODUCT_IMPROVEMENT
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Customer Driven
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    CUSTOMERDRIVEN
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Initial Release
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    INITIAL_RELEASE
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                                <Row>
+                                    <displayName>
+                                    <![CDATA[
+                                    Vendor Driven
+                                    ]]>
+                                    </displayName>
+                                    <internalName>
+                                    <![CDATA[
+                                    VENDORDRIVEN
+                                    ]]>
+                                    </internalName>
+                                </Row>
+                            </Rows>
+                        </infoTable>
+                    </Value>
+                    <Timestamp>2024-09-06T14:00:49.188Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </categories>
+                <changeIssueId>
+                    <Value>
+                    <![CDATA[
+                    OR:wt.change2.WTChangeIssue:8439438
+                    ]]>
+                    </Value>
+                    <Timestamp>2024-10-15T18:45:33.952Z</Timestamp>
+                    <Quality>GOOD</Quality>
+                </changeIssueId>
+            </ThingProperties>
+        </Thing>
+    </Things>
+</Entities>
